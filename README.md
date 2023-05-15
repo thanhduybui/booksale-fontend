@@ -1,2 +1,3 @@
 # booksale-fontend
-My personal bookstore decide
+
+My personal bookstore design
