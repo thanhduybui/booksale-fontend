@@ -1,0 +1,391 @@
+/* 
+
+FONT SYSTEM:
+12px 14px 16px 18px 20px 24px 32px 36px 48px 52px 64px 76px 84px 96px 
+SPACING SYSTEM
+1px 2px 4px 8px 12px 16px 20px 24px 32px 48px 64px 74px 86px 96px 128px
+
+COLOR:
+- primary: #00817E;
+- tints: #1a8e8b;
+- shades: ;
+- other: #fab005
+-------text color: #fff;
+for #fff background: #333;
+light gray: #838383, #aaa
+
+
+
+LINE HIGH
+- for big text:
+- for normal text: 
+
+SHADOW
+
+FONT-WEIGHT
+
+BORDER RADIUS
+- small
+- md
+- large
+
+
+BRAND NAME: BookSale
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #444;
+  line-height: 1;
+}
+
+/* ******************************************** */
+/* GENERAL */
+/* ******************************************** */
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 4.8rem;
+}
+
+.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1.4rem 3.2rem;
+  text-transform: uppercase;
+
+  border: none;
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+.v-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.6rem rgba(250, 176, 5, 0.5);
+}
+
+/* HEPLER CLASS */
+.margin-right-sm {
+  margin-right: 0.8rem;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 0.8rem;
+}
+
+/* ******************************************** */
+/* NAVIGATION BAR */
+/* ******************************************** */
+
+.header {
+  background-color: #00817e;
+  padding: 2.4rem 9.6rem 4.8rem 9.6rem;
+}
+
+.header-grid {
+  grid-template-columns: 1.5fr 2.5fr 1fr;
+}
+
+.profile-img {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.header-logo {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #fab005;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.main-nav-list {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+
+  gap: 4.8rem;
+}
+
+.logo,
+.header-link:link,
+.header-link:visited {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.8rem;
+
+  transition: all 0.3s;
+}
+
+.header-link:hover,
+.header-link:active {
+  color: #fab005;
+}
+
+.header-link.cart {
+  font-size: 3.2rem;
+}
+
+.header-link.category {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.search-form input {
+  display: inline-block;
+  width: 70%;
+  padding: 1.6rem 1.6rem 1.6rem 3.6rem;
+  border: none;
+  border-radius: 2000px;
+  transition: all 0.4s;
+}
+
+.search-icon {
+  position: relative;
+}
+
+.search-icon ion-icon {
+  color: #838383;
+  font-size: 2.4rem;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-60%);
+}
+
+.search-form input::placeholder {
+  font-size: 1.8rem;
+  color: #838383;
+}
+
+.btn--search {
+  border-radius: 200px;
+  background-color: #fab005;
+  color: #444;
+  text-transform: lowercase;
+}
+
+.btn--search:hover {
+  background-color: #f59f00;
+}
+
+/* ******************************************** */
+/* SLIDER  */
+/* ******************************************** */
+
+.section-slider {
+}
+
+.slider {
+  max-width: 120rem;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+  padding: 3.2rem;
+  box-shadow: 0 0 9.6rem rgba(0, 0, 0, 0.1);
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* button */
+
+.btn-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  border: none;
+
+  position: absolute;
+
+  color: #fff;
+  background-color: #00817e;
+  /* box-shadow: 0 2.4rem 6.4rem rgba(0, 0, 0, 0.15); */
+  transition: all 0.3s;
+}
+
+.btn-circle:hover {
+  background-color: #fff;
+  color: #00817e;
+  box-shadow: 0 2.4rem 6.4rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-circle ion-icon {
+  font-size: 24px;
+}
+
+.btn-circle:focus {
+  background-color: #fff;
+  color: #00817e;
+  box-shadow: 0 0 0 0.5rem rgba(0, 129, 127, 0.3);
+}
+
+.btn-left {
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.btn-right {
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+/* dots */
+.dots {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 50%;
+  gap: 1.6rem;
+  transform: translate(-50%, -150%);
+}
+
+.dot {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #aaa;
+  border-radius: 50%;
+}
+
+.dot--current {
+  background-color: #00817e;
+}
+
+/* ******************************************** */
+/* MAIN SECTION  */
+/* ******************************************** */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 120rem 1fr;
+}
+
+.side-bar {
+  background-color: #b3d9d8;
+  height: 100vh;
+}
+
+.products-section {
+  text-align: center;
+  height: 100vh;
+}
+
+/* ******************************************** */
+/* VERTICAL BAR */
+/* ******************************************** */
+
+/* vertical list */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-list {
+  width: 50%;
+  background-color: #fff;
+  padding: 2.4rem 1.2rem;
+  align-self: flex-end;
+  border-left: 4px solid #00817e;
+}
+
+.sidebar-list li {
+  color: #555;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 2rem 1.6rem;
+  border: 1px solid #eee;
+  /* border: 1px solid #00817e; */
+  border-left: none;
+  border-bottom: none;
+  transition: all 0.3s;
+}
+
+.sidebar-list li:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+.end-icon {
+  margin-left: auto;
+}
+
+.sb-icon {
+  font-size: 2.4rem;
+  color: #00817e;
+}
+
+.sb-link,
+.sb-link:link,
+.sb-link:visited {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  text-decoration: none;
+  color: #555;
+  transition: all 0.3s;
+}
+
+.sb-link:hover,
+.sb-link:active {
+  color: #00817e;
+}
+
+.sidebar-list li.list-item-selected {
+  border-top: 0.6rem solid #00817e;
+}
+
+.sidebar-list li.list-item-selected a {
+  color: #00817e;
+}
+
+.sb-link:focus {
+  outline: none;
+  box-shadow: none;
+}
