@@ -1,6 +1,10 @@
 /* ******************************************** */
 /* NAVIGATION BAR */
 /* ******************************************** */
+header {
+  max-width: 100vw;
+  margin: 0 auto;
+}
 
 .header {
   background-color: #00817e;
@@ -70,6 +74,7 @@
 .search-form input {
   display: inline-block;
   width: 70%;
+  max-width: 80rem;
   padding: 1.6rem 1.6rem 1.6rem 3.6rem;
   border: none;
   border-radius: 2000px;
@@ -366,15 +371,23 @@
   padding: 9.6rem 0;
 }
 
+.books-container {
+  grid-template-rows: 1fr 1fr;
+}
+
 .bookshelf-heading {
   text-align: center;
   margin-bottom: 2.4rem;
 }
 
 .bookshelf-container {
-  /* background-image: linear-gradient(to bottom, #99cdcb, #00817f); */
   background-color: #f0f7f7;
   padding: 3.2rem 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
 }
 
 .bookshelf-list {
@@ -430,6 +443,8 @@
   padding: 0rem 1.2rem 1.2rem 1.2rem;
   overflow: hidden;
   background-color: #fff;
+
+  position: relative;
 }
 
 .book-card:hover {
@@ -514,4 +529,27 @@
 .card-link:active {
   color: #00817e;
   border-bottom: 2px solid #00817e;
+}
+
+.btn-bs-all {
+  background-color: #fab005;
+}
+
+.btn-bs-all:hover {
+  background-color: #f59f00;
+}
+
+.discount-tag {
+  position: absolute;
+  top: -4%;
+  right: -30%;
+  /* padding: 4.8rem 4.8rem 0rem 4.8rem; */
+
+  padding: 0 4.8rem;
+  padding-top: 2.4rem;
+  background-color: #fab005;
+  color: #f03e3e;
+  transform: rotate(45deg);
+  font-weight: 600;
+  font-size: 1.2rem;
 }
