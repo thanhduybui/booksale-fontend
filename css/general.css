@@ -1,0 +1,152 @@
+/* 
+
+FONT SYSTEM:
+12px 14px 16px 18px 20px 24px 32px 36px 48px 52px 64px 76px 84px 96px 
+SPACING SYSTEM
+1px 2px 4px 8px 12px 16px 20px 24px 32px 48px 64px 74px 86px 96px 128px
+
+COLOR:
+- primary:#00817E ;
+- tints: #1a8e8b, #E6F2F2;
+#99cdcb for button see all
+- shades: 
+#004d4c for text on background #E6F2F2;
+- other: #fab005
+-------text color: #fff;
+for #fff background: #333;
+light gray:#838383 , #aaa
+
+
+
+LINE HIGH
+- for big text:
+- for normal text: 
+
+SHADOW
+
+FONT-WEIGHT
+
+BORDER RADIUS
+- small
+- md : 12px;
+- large
+
+
+BRAND NAME: BookSale
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #444;
+  line-height: 1;
+}
+
+/* ******************************************** */
+/* GENERAL */
+/* ******************************************** */
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 3.2rem;
+}
+
+.grid-2--columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3--columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4--columns {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-5--columns {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1.4rem 3.2rem;
+  text-transform: uppercase;
+
+  border: none;
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+.btn-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+
+  /* box-shadow: 0 2.4rem 6.4rem rgba(0, 0, 0, 0.15); */
+  transition: all 0.3s;
+}
+
+.btn--full {
+  border-radius: 200px;
+  color: #444;
+  text-transform: lowercase;
+}
+
+.v-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.6rem rgba(250, 176, 5, 0.5);
+}
+
+.heading-secondary {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #555;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.subheading {
+  font-size: 1.6rem;
+  color: #004d4c;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* HEPLER CLASS */
+.margin-right-sm {
+  margin-right: 0.8rem;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 0.8rem;
+}
+.margin-bottom-md {
+  margin-bottom: 3.2rem;
+}

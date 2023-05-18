@@ -10,7 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,500;1,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>The BookSale</title>
   </head>
   <body>
@@ -37,7 +38,7 @@
               class="margin-right-sm"
               placeholder="Tìm kiếm sách..."
             />
-            <button class="btn btn--search">search</button>
+            <button class="btn btn--full btn--search">search</button>
           </form>
           <nav class="main-nav">
             <ul class="main-nav-list">
@@ -59,27 +60,25 @@
         </div>
       </section>
 
-      <section class="section-slider">
-        <div class="container">
-          <div class="slider">
-            <img
-              class="slider-img"
-              src="imgs/slider/new-books.png"
-              alt="New books"
-            />
+      <section class="section-slider container">
+        <div class="slider">
+          <img
+            class="slider-img"
+            src="imgs/slider/new-books.png"
+            alt="New books"
+          />
 
-            <button class="btn-circle btn-left">
-              <ion-icon name="chevron-back-outline"></ion-icon>
-            </button>
-            <button class="btn-circle btn-right">
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-            </button>
+          <button class="btn-circle btn-left">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
+          <button class="btn-circle btn-right">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
 
-            <div class="dots">
-              <div class="dot dot--current"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-            </div>
+          <div class="dots">
+            <div class="dot dot--current"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
           </div>
         </div>
       </section>
@@ -132,7 +131,212 @@
             </li>
           </ul>
         </nav>
-        <section class="products-section">PRODUCT SECTION</section>
+        <div class="product-section container">
+          <section class="top-product-section">
+            <div class="tp-header margin-bottom-md">
+              <p class="subheading">Sản phẩm nổi bật</p>
+              <div class="tp-btn-section">
+                <button class="btn btn--full btn--all">Xem tất cả</button>
+                <button class="btn-circle btn-pre">
+                  <ion-icon name="chevron-back-outline"></ion-icon>
+                </button>
+                <button class="btn-circle btn-next">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <div class="top-books grid grid-5--columns">
+              <div class="top-book">
+                <div class="tb-img-box">
+                  <img
+                    class="tb-img"
+                    src="imgs/top-books/book1.jpeg"
+                    alt="Cây cam ngọt của tôi"
+                  />
+                </div>
+                <div class="tb-text-box">
+                  <p class="tb-title">Cây cam ngọt của tôi</p>
+                  <p class="tb-author">Jose Mauro de Vasconcelos</p>
+                </div>
+              </div>
+              <div class="top-book">
+                <div class="tb-img-box">
+                  <img
+                    class="tb-img"
+                    src="imgs/top-books/book2.jpeg"
+                    alt="Cây cam ngọt của tôi"
+                  />
+                </div>
+                <div class="tb-text-box">
+                  <p class="tb-title">Toto-chan bên cửa sổ</p>
+                  <p class="tb-author">Tetsuko Kuroyanagi</p>
+                </div>
+              </div>
+              <div class="top-book">
+                <div class="tb-img-box">
+                  <img
+                    class="tb-img"
+                    src="imgs/top-books/book3.jpeg"
+                    alt="Cây cam ngọt của tôi"
+                  />
+                </div>
+                <div class="tb-text-box">
+                  <p class="tb-title">Lược sử kinh tế học</p>
+                  <p class="tb-author">Niall Kishtainy</p>
+                </div>
+              </div>
+              <div class="top-book">
+                <div class="tb-img-box">
+                  <img
+                    class="tb-img"
+                    src="imgs/top-books/book4.jpeg"
+                    alt="Cây cam ngọt của tôi"
+                  />
+                </div>
+                <div class="tb-text-box">
+                  <p class="tb-title">Đắc nhân tâm</p>
+                  <p class="tb-author">Dale Carnegie</p>
+                </div>
+              </div>
+              <div class="top-book">
+                <div class="tb-img-box">
+                  <img
+                    class="tb-img"
+                    src="imgs/top-books/book5.jpeg"
+                    alt="Cây cam ngọt của tôi"
+                  />
+                </div>
+                <div class="tb-text-box">
+                  <p class="tb-title">Số đỏ</p>
+                  <p class="tb-author">Vũ Trọng Phụng</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- PRODUCT SECTION -->
+          <section class="products">
+            <div class="bookshelf">
+              <h2 class="heading-secondary bookshelf-heading">
+                Văn học - Tiểu thuyết
+              </h2>
+              <ul class="bookshelf-list">
+                <li class="selected">
+                  <a class="bs-link" href="#">Kinh điển</a>
+                </li>
+                <li><a class="bs-link" href="#">Nước ngoài</a></li>
+                <li><a class="bs-link" href="#">Việt Nam</a></li>
+              </ul>
+              <div class="bookshelf-container">
+                <div class="books-container grid grid-5--columns">
+                  <div class="bs-img-box"></div>
+                  <div class="book-card">
+                    <img
+                      src="imgs/top-books/book1.jpeg"
+                      alt="Book Cover"
+                      class="card-img"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title">Cây cam ngọt của tôi</h3>
+                      <div class="rating" class="card-rating">
+                        <span class="rating-number">4.8</span
+                        ><span><ion-icon name="star"></ion-icon></span
+                        ><span class="rating-text">Đã bán 200</span>
+                      </div>
+                      <div class="card-prices">
+                        <span class="card-discount">76.000đ</span>
+                        <span class="card-price">100.000đ</span>
+                      </div>
+                      <a href="#" class="card-link">mua sách &rarr;</a>
+                    </div>
+                  </div>
+
+                  <div class="book-card">
+                    <img
+                      src="imgs/top-books/book1.jpeg"
+                      alt="Book Cover"
+                      class="card-img"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title">Cây cam ngọt của tôi</h3>
+                      <div class="rating" class="card-rating">
+                        <span class="rating-number">4.8</span
+                        ><span><ion-icon name="star"></ion-icon></span
+                        ><span class="rating-text">Đã bán 200</span>
+                      </div>
+                      <div class="card-prices">
+                        <span class="card-discount">76.000đ</span>
+                        <span class="card-price">100.000đ</span>
+                      </div>
+                      <a href="#" class="card-link">mua sách &rarr;</a>
+                    </div>
+                  </div>
+
+                  <div class="book-card">
+                    <img
+                      src="imgs/top-books/book1.jpeg"
+                      alt="Book Cover"
+                      class="card-img"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title">Cây cam ngọt của tôi</h3>
+                      <div class="rating" class="card-rating">
+                        <span class="rating-number">4.8</span
+                        ><span><ion-icon name="star"></ion-icon></span
+                        ><span class="rating-text">Đã bán 200</span>
+                      </div>
+                      <div class="card-prices">
+                        <span class="card-discount">76.000đ</span>
+                        <span class="card-price">100.000đ</span>
+                      </div>
+                      <a href="#" class="card-link">mua sách &rarr;</a>
+                    </div>
+                  </div>
+                  <div class="book-card">
+                    <img
+                      src="imgs/top-books/book1.jpeg"
+                      alt="Book Cover"
+                      class="card-img"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title">Cây cam ngọt của tôi</h3>
+                      <div class="rating" class="card-rating">
+                        <span class="rating-number">4.8</span
+                        ><span><ion-icon name="star"></ion-icon></span
+                        ><span class="rating-text">Đã bán 200</span>
+                      </div>
+                      <div class="card-prices">
+                        <span class="card-discount">76.000đ</span>
+                        <span class="card-price">100.000đ</span>
+                      </div>
+                      <a href="#" class="card-link">mua sách &rarr;</a>
+                    </div>
+                  </div>
+                  <div class="book-card">
+                    <img
+                      src="imgs/top-books/book1.jpeg"
+                      alt="Book Cover"
+                      class="card-img"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title">Cây cam ngọt của tôi</h3>
+                      <div class="rating" class="card-rating">
+                        <span class="rating-number">4.8</span
+                        ><span><ion-icon name="star"></ion-icon></span
+                        ><span class="rating-text">Đã bán 200</span>
+                      </div>
+                      <div class="card-prices">
+                        <span class="card-discount">76.000đ</span>
+                        <span class="card-price">100.000đ</span>
+                      </div>
+                      <a href="#" class="card-link">mua sách &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
 
