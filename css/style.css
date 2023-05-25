@@ -8,7 +8,10 @@ header {
 
 .header {
   background-color: #00817e;
-  padding: 2.4rem 9.6rem 4.8rem 9.6rem;
+}
+
+.search-bar {
+  padding: 2.4rem 9.6rem 1.2rem 9.6rem;
 }
 
 .header-grid {
@@ -108,6 +111,58 @@ header {
 }
 
 /* ******************************************** */
+/* NAVIGATION */
+/* ******************************************** */
+
+.nav-container {
+  border-top: 1px solid #ccc;
+  background-color: #00817e;
+}
+
+.nav-list {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 9.6rem; */
+}
+
+.nav-list li {
+  padding: 1.6rem 4.8rem;
+  transition: all 0.3s;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+}
+
+.selected-nav--item {
+  background-color: #e6f2f2;
+}
+
+.selected-nav--item .nav-link {
+  color: #004d4c;
+}
+
+.nav-list li:hover {
+  background-color: #e6f2f2;
+}
+
+.nav-list li:hover a {
+  color: #004d4c;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: #004d4c;
+}
+
+/* ******************************************** */
 /* SLIDER  */
 /* ******************************************** */
 
@@ -197,7 +252,7 @@ header {
 
 .main-grid {
   display: grid;
-  grid-template-columns: 1fr 120rem 1fr;
+  grid-template-columns: 1fr 4fr;
 }
 
 .side-bar {
@@ -205,82 +260,9 @@ header {
   height: 100vh;
 }
 
-.products-section {
-  text-align: center;
-  height: 100vh;
-}
-
-/* ******************************************** */
-/* VERTICAL BAR */
-/* ******************************************** */
-
-/* vertical list */
-
-.sidebar {
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar-list {
-  /* width: 50%; */
-  max-width: 400px;
-  background-color: #fff;
-  padding: 2.4rem 0rem;
-  align-self: flex-end;
-}
-
-.sidebar-list li {
-  color: #555;
-  font-size: 1.8rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  padding: 2rem 1.6rem;
-  border: 1px solid #eee;
-  /* border: 1px solid #00817e; */
-  border-bottom: none;
-  transition: all 0.3s;
-}
-
-.sidebar-list li:last-child {
-  border-bottom: 1px solid #eee;
-}
-
-.end-icon {
-  margin-left: auto;
-}
-
-.sb-icon {
-  font-size: 2.4rem;
-  color: #00817e;
-}
-
-.sb-link,
-.sb-link:link,
-.sb-link:visited {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  text-decoration: none;
-  color: #555;
-  transition: all 0.3s;
-}
-
-.sb-link:hover,
-.sb-link:active {
-  color: #00817e;
-}
-
-.sidebar-list li.list-item-selected {
-  border-top: 0.6rem solid #00817e;
-}
-
-.sidebar-list li.list-item-selected a {
-  color: #00817e;
-}
-
-.sb-link:focus {
-  outline: none;
-  box-shadow: none;
+.product-container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
 }
 
 /* ******************************************** */
@@ -552,4 +534,92 @@ header {
   transform: rotate(45deg);
   font-weight: 600;
   font-size: 1.2rem;
+}
+
+/* ******************************************** */
+/* FOOTER SECTION */
+/* ******************************************** */
+
+.footer {
+  padding: 4.8rem 0 9.6rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #444;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.footer-logo:link,
+.footer-logo:visited {
+  color: #444;
+  font-weight: 600;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.footer-logo:hover,
+.footer-logo:active {
+  color: #767676;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: #767676;
+  margin-top: auto;
+}
+
+.address {
+  color: #767676;
+  margin-bottom: 2.4rem;
 }

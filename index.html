@@ -18,15 +18,11 @@
     <!-- HEADER -->
     <header>
       <section class="header margin-bottom-sm">
-        <div class="grid header-grid">
+        <div class="search-bar grid header-grid">
           <div class="header-left">
             <a href="#" class="logo"
               ><span class="header-logo">BOOKSALE</span></a
             >
-            <a href="#" class="category header-link"
-              ><span>Thể loại </span
-              ><ion-icon name="chevron-down-outline"></ion-icon
-            ></a>
           </div>
           <form action="#" class="search-form">
             <label for="search-input" class="search-icon"
@@ -58,6 +54,20 @@
             </ul>
           </nav>
         </div>
+
+        <div class="nav-container">
+          <nav class="navigation container">
+            <ul class="nav-list">
+              <li class="">
+                <a href="" class="nav-link">Danh mục</a>
+              </li>
+              <li><a href="" class="nav-link">Sách mới</a></li>
+              <li><a href="" class="nav-link">Sách bán chạy</a></li>
+              <li><a href="" class="nav-link">Sản phẩm nổi bật</a></li>
+              <li><a href="" class="nav-link">Sách giảm giá</a></li>
+            </ul>
+          </nav>
+        </div>
       </section>
 
       <section class="section-slider container">
@@ -86,51 +96,7 @@
 
     <!-- MAIN CONTENT -->
     <main>
-      <div class="main-container main-grid">
-        <nav class="sidebar">
-          <ul class="v-list sidebar-list">
-            <li class="list-item-selected">
-              <a class="sb-link" href="#"
-                ><ion-icon class="sb-icon" name="grid-sharp"></ion-icon>
-                <span> Danh mục sách </span
-                ><ion-icon
-                  class="end-icon"
-                  name="chevron-forward-outline"
-                ></ion-icon
-              ></a>
-            </li>
-            <li>
-              <a class="sb-link" href="#"
-                ><ion-icon class="sb-icon" name="book-sharp"></ion-icon
-                ><span> Sách bán chạy</span></a
-              >
-            </li>
-            <li>
-              <a class="sb-link" href="#"
-                ><ion-icon class="sb-icon" name="time-sharp"></ion-icon
-                ><span> Sách mới phát hành</span></a
-              >
-            </li>
-            <li>
-              <a class="sb-link" href="#"
-                ><ion-icon class="sb-icon" name="person-sharp"></ion-icon>
-                <span> Tác giả nổi bật</span></a
-              >
-            </li>
-            <li>
-              <a class="sb-link" href="#"
-                ><ion-icon class="sb-icon" name="home-sharp"></ion-icon
-                ><span> Nhà xuất bản</span></a
-              >
-            </li>
-            <li>
-              <a class="sb-link" href="#"
-                ><ion-icon class="sb-icon" name="call-sharp"></ion-icon>
-                <span> Hỗ trợ khách hàng</span></a
-              >
-            </li>
-          </ul>
-        </nav>
+      <div class="main-container">
         <div class="product-section container">
           <section class="top-product-section">
             <div class="tp-header margin-bottom-md">
@@ -351,7 +317,64 @@
     </main>
 
     <!-- FOOTER -->
-    <footer></footer>
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo"> BookSale </a>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; 2027 by BookSale, Inc. All rights reserved.
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Liên hệ</p>
+          <address class="contacts">
+            <p class="address">1 Võ Văn Ngânn - Thủ Đức - Hồ Chí Minh</p>
+            <p>
+              <a class="footer-link" href="tel:0383314133">0383314133</a><br />
+              <a class="footer-link" href="dtb742002@gmail.com"
+                >dtb742002@gmail.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Tài khoản</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Tạo tài khoản</a></li>
+            <li><a class="footer-link" href="#">Đăng ký</a></li>
+            <li><a class="footer-link" href="#">Cá nhân</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Công ty</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Về chúng tôi</a></li>
+            <li><a class="footer-link" href="#">Tác giả</a></li>
+            <li><a class="footer-link" href="#">Nhà xuất bản</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
 
     <script
       type="module"
