@@ -1,0 +1,212 @@
+/* ******************************************** */
+/* BOOK DETAIL */
+/* ******************************************** */
+.detail-section {
+  background-color: #e6f2f2;
+  padding: 1.2rem 0;
+}
+.product-detail {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.detail-grid {
+  grid-template-columns: 1fr 2fr;
+}
+
+.detail-img-box {
+  padding: 2.4rem 0;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  border-right: 2px solid #e6f2f2;
+}
+
+.main-img {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 2.4rem;
+}
+
+.detail-imgs {
+  display: flex;
+  gap: 2.4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-img {
+  width: 6.4rem;
+  height: 6.4rem;
+  background-color: #7d7d7d;
+  border-radius: 10px;
+}
+
+.detail-text-box {
+  display: flex;
+  flex-direction: column;
+  padding: 2.4rem;
+}
+
+.author {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #767676;
+}
+
+.rating-box {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #767676;
+  font-weight: 500;
+}
+
+.rating-icons ion-icon {
+  font-size: 1.6rem;
+  color: #fab005;
+}
+
+.rating-number {
+  border-left: 2px solid #767676;
+}
+
+.detail-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right, #f03e3e, #fd7e14);
+  width: 50%;
+  padding: 1.2rem 2.4rem;
+  border-radius: 10px;
+}
+
+.pricing-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.sell-price {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+}
+
+.original-price {
+  font-size: 1.6rem;
+  text-decoration: line-through;
+  color: #767676;
+}
+
+.sell-price span {
+  top: 0;
+  right: 0;
+  position: absolute;
+  font-size: 1.6rem;
+}
+
+.discount {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.shipped-address {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.detail-address {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.shipped-address span {
+  font-weight: 600;
+}
+
+.address-link:link,
+.address-link:visited {
+  font-size: 1.2rem;
+  color: #1a8e8b;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.address-link:hover,
+.address-link:active {
+  color: #00817e;
+}
+
+.quantity-box {
+  display: flex;
+  align-items: center;
+}
+
+.buy-form {
+  padding: 2.4rem 0;
+  border-top: 2px solid #e6f2f2;
+}
+
+.quantity-box input {
+  height: 3.2rem;
+  max-width: 10rem;
+  text-align: center;
+  border-top: 1px solid #00817e;
+  border-bottom: 1px solid #00817e;
+  border-right: none;
+  border-left: none;
+}
+
+.quantity input[type="number"] {
+  /* Styles for the number input */
+  /* For example, you can change the text color and font size */
+  color: #333;
+  font-size: 1.6rem;
+}
+
+.quantity-box input[type="number"]::-webkit-inner-spin-button,
+.quantity-box input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-label {
+  font-size: 1.6rem;
+  color: #444;
+}
+
+.btn-decrease,
+.btn-increase {
+  width: 3.2rem;
+  height: 3.2rem;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  background-color: #00817e;
+}
+
+.btn-decrease {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.btn-increase {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.btn-buy {
+  color: #fff;
+  background-color: #00817e;
+  border-radius: 10px;
+  width: 30%;
+  font-weight: 500;
+  text-transform: capitalize;
+}

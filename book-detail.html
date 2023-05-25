@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/detail.css" />
+    <title>Book Detail</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <section class="header margin-bottom-sm">
+        <div class="search-bar grid header-grid">
+          <div class="header-left">
+            <a href="#" class="logo"
+              ><span class="header-logo">BOOKSALE</span></a
+            >
+          </div>
+          <form action="#" class="search-form">
+            <label for="search-input" class="search-icon"
+              ><ion-icon name="search"></ion-icon
+            ></label>
+            <input
+              type="text"
+              id="search-input"
+              class="margin-right-sm"
+              placeholder="Tìm kiếm sách..."
+            />
+            <button class="btn btn--full btn--search">search</button>
+          </form>
+          <nav class="main-nav">
+            <ul class="main-nav-list">
+              <li class="main-nav-item">
+                <a href="#" class="cart header-link"
+                  ><ion-icon class="cart-icon" name="cart-sharp"></ion-icon
+                ></a>
+              </li>
+              <li class="main-nav-item">
+                <a class="user header-link" href="#"
+                  ><img
+                    class="profile-img"
+                    src="imgs/user.png"
+                    alt="User's profile photo"
+                /></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="nav-container">
+          <nav class="navigation container">
+            <ul class="nav-list">
+              <li class="">
+                <a href="" class="nav-link">Danh mục</a>
+              </li>
+              <li><a href="" class="nav-link">Sách mới</a></li>
+              <li><a href="" class="nav-link">Sách bán chạy</a></li>
+              <li><a href="" class="nav-link">Sản phẩm nổi bật</a></li>
+              <li><a href="" class="nav-link">Sách giảm giá</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="detail-section">
+      <section class="product-detail container grid detail-grid">
+        <div class="detail-img-box">
+          <img src="imgs/top-books/book5.jpeg" alt="" class="main-img" />
+          <div class="detail-imgs">
+            <div class="detail-img"></div>
+            <div class="detail-img"></div>
+            <div class="detail-img"></div>
+            <div class="detail-img"></div>
+          </div>
+        </div>
+        <div class="detail-text-box">
+          <div class="title margin-bottom-lg">
+            <p class="author margin-bottom-sm">Tác giả: Vũ Trọng Phụng</p>
+            <h1 class="heading-secondary margin-bottom-md">
+              Số đỏ (Tái bản 2020)
+            </h1>
+            <div class="rating-box">
+              <div class="rating-icons padding-r-sm">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <p class="rating-numbe padding-l-sm padding-r-md">
+                ( Xem 370 đánh giá )
+              </p>
+              <p class="rating-number padding-l-md">Đã bán 2000</p>
+            </div>
+          </div>
+          <div class="detail-pricing margin-bottom-lg">
+            <div class="pricing-box">
+              <p class="sell-price padding-r-md">60.000<span>đ</span></p>
+              <p class="original-price padding-r-md">100.000<span>đ</span></p>
+            </div>
+            <div class="discount-box padding-r-sm">
+              <p class="discount">Giảm giá <span>30%</span></p>
+            </div>
+          </div>
+          <div class="detail-address margin-bottom-lg">
+            <p class="shipped-address">
+              Giao đến: <span>An Ninh Tây, Tuy An, Phú Yên</span>
+            </p>
+            <a href="#" class="address-link">Đổi địa chỉ</a>
+          </div>
+
+          <form class="buy-form">
+            <p class="quantity-label margin-bottom-sm">Số lượng:</p>
+            <div class="quantity-box margin-bottom-md">
+              <button class="btn-decrease">-</button>
+              <input type="number" min="0" value="0" />
+              <button class="btn-increase">+</button>
+            </div>
+            <button type="submit" class="btn btn-buy">Chọn mua</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo"> BookSale </a>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; 2027 by BookSale, Inc. All rights reserved.
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Liên hệ</p>
+          <address class="contacts">
+            <p class="address">1 Võ Văn Ngânn - Thủ Đức - Hồ Chí Minh</p>
+            <p>
+              <a class="footer-link" href="tel:0383314133">0383314133</a><br />
+              <a class="footer-link" href="dtb742002@gmail.com"
+                >dtb742002@gmail.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Tài khoản</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Tạo tài khoản</a></li>
+            <li><a class="footer-link" href="#">Đăng ký</a></li>
+            <li><a class="footer-link" href="#">Cá nhân</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Công ty</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Về chúng tôi</a></li>
+            <li><a class="footer-link" href="#">Tác giả</a></li>
+            <li><a class="footer-link" href="#">Nhà xuất bản</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

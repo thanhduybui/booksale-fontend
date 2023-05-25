@@ -14,7 +14,8 @@ COLOR:
 - other: #fab005
 -------text color: #fff;
 for #fff background: #333;
-light gray:#838383 , #aaa
+light gray:#838383 , #aaa, #767676
+for Price: #f03e3e
 
 
 
@@ -59,6 +60,12 @@ body {
 
 .container {
   max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.big-container {
+  max-width: 130rem;
   padding: 0 3.2rem;
   margin: 0 auto;
 }
@@ -148,5 +155,33 @@ body {
   margin-bottom: 0.8rem;
 }
 .margin-bottom-md {
+  margin-bottom: 1.6rem;
+}
+
+.margin-bottom-lg {
   margin-bottom: 3.2rem;
+}
+
+.padding-r-sm {
+  padding-right: 0.8rem;
+}
+
+.padding-r-md {
+  padding-right: 1.6rem;
+}
+
+.padding-r-lg {
+  padding-right: 3.2rem;
+}
+
+.padding-l-sm {
+  padding-left: 0.8rem;
+}
+
+.padding-l-md {
+  padding-left: 1.6rem;
+}
+
+.padding-l-lg {
+  padding-left: 3.2rem;
 }
