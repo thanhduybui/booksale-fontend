@@ -1,0 +1,124 @@
+/* ******************************************** */
+/* REPONSIVE FOR HOME */
+/* ******************************************** */
+@media (max-width: 70em) {
+  html {
+    font-size: 56.25%;
+  }
+  .search-bar {
+    padding: 2.4rem 3.2rem 1.2rem 3.2rem;
+  }
+}
+
+@media (max-width: 62em) {
+  html {
+    font-size: 50%;
+  }
+  /* Top product sections */
+  .tb-img-box {
+    max-width: 70%;
+    height: 70%;
+  }
+  /* gallery section */
+  .card-body {
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 51em) {
+  .books-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .header-grid {
+    grid-template-columns: 1.5fr 2.5fr 1.5fr;
+  }
+
+  .search-form {
+    display: none;
+  }
+
+  .header-left {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navigation {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    z-index: 5;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease-in;
+    transform: translateX(-100%);
+
+    /* 1. hide visually */
+    opacity: 0;
+
+    /* 2. Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3. hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .navigation {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+    z-index: 1000;
+    color: #333;
+  }
+
+  .btn-mobile-nav {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    z-index: 2222;
+  }
+
+  .btn-search-mobile {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    margin-top: 4.8rem;
+  }
+
+  .nav-link:link,
+  .nav-link:visited {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .nav-link:hover,
+  .nav-link:active {
+    color: #fab005;
+  }
+
+  .nav-list li:hover {
+    background-color: transparent;
+  }
+
+  .nav-list li:hover .nav-link {
+    color: #fab005;
+  }
+
+  .nav-list .nav-link:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}

@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
     <title>The BookSale</title>
   </head>
   <body>
@@ -19,11 +20,16 @@
     <header>
       <section class="header margin-bottom-sm">
         <div class="search-bar grid header-grid">
+          <button class="btn-mobile-nav">
+            <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+            <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+          </button>
           <div class="header-left">
             <a href="#" class="logo"
               ><span class="header-logo">BOOKSALE</span></a
             >
           </div>
+
           <form action="#" class="search-form">
             <label for="search-input" class="search-icon"
               ><ion-icon name="search"></ion-icon
@@ -36,7 +42,11 @@
             />
             <button class="btn btn--full btn--search">search</button>
           </form>
+
           <nav class="main-nav">
+            <button class="btn-search-mobile">
+              <ion-icon name="search" class="search-icon"></ion-icon>
+            </button>
             <ul class="main-nav-list">
               <li class="main-nav-item">
                 <a href="#" class="cart header-link"
@@ -55,19 +65,19 @@
           </nav>
         </div>
 
-        <div class="nav-container">
-          <nav class="navigation container">
+        <nav class="navigation">
+          <div class="container">
             <ul class="nav-list">
               <li class="">
-                <a href="" class="nav-link">Danh mục</a>
+                <a href="#" class="nav-link">Danh mục</a>
               </li>
-              <li><a href="" class="nav-link">Sách mới</a></li>
-              <li><a href="" class="nav-link">Sách bán chạy</a></li>
-              <li><a href="" class="nav-link">Sản phẩm nổi bật</a></li>
-              <li><a href="" class="nav-link">Sách giảm giá</a></li>
+              <li><a href="#" class="nav-link">Sách mới</a></li>
+              <li><a href="#" class="nav-link">Sách bán chạy</a></li>
+              <li><a href="#" class="nav-link">Sản phẩm nổi bật</a></li>
+              <li><a href="#" class="nav-link">Sách giảm giá</a></li>
             </ul>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </section>
 
       <section class="section-slider container">
@@ -194,7 +204,9 @@
                 <li><a class="bs-link" href="#">Việt Nam</a></li>
               </ul>
               <div class="bookshelf-container">
-                <div class="books-container grid grid-5--columns">
+                <div
+                  class="books-container grid grid-5--columns margin-bottom-lg"
+                >
                   <div
                     class="bs-img-box"
                     role="img"
@@ -308,7 +320,9 @@
                     </div>
                   </div>
                 </div>
-                <button class="btn btn--full btn-bs-all">Xem tất cả</button>
+                <div class="btn-all__container">
+                  <button class="btn btn--full btn-bs-all">Xem tất cả</button>
+                </div>
               </div>
             </div>
           </section>
