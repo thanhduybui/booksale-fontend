@@ -15,7 +15,7 @@ COLOR:
 -------text color: #fff;
 for #fff background: #333;
 light gray:#838383 , #aaa, #767676
-for Price: #f03e3e
+for Price: #f03e3e, #d83838
 
 
 
@@ -93,6 +93,12 @@ body {
   grid-template-columns: repeat(5, 1fr);
 }
 
+.grid-6--columns {
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 4.8rem;
+  row-gap: 2.4rem;
+}
+
 .btn {
   font-size: 1.6rem;
   font-weight: 700;
@@ -122,6 +128,19 @@ body {
   text-transform: lowercase;
 }
 
+.btn--radius {
+  border-radius: 9px;
+  background-color: #00817e;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.4rem;
+  transition: all 0.3s;
+}
+
+.btn--radius:hover {
+  background-color: #1a8e8b;
+}
+
 .v-list {
   list-style: none;
   display: flex;
@@ -141,8 +160,22 @@ body {
   text-transform: uppercase;
 }
 
-.subheading {
+.heading-tertiary {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #555;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.heading-4 {
   font-size: 1.6rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.subheading {
+  font-size: 1.8rem;
   color: #004d4c;
   font-weight: 600;
   text-transform: uppercase;
@@ -186,4 +219,8 @@ body {
 
 .padding-l-lg {
   padding-left: 3.2rem;
+}
+
+.center {
+  margin: 0 auto;
 }

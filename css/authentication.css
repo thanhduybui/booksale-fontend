@@ -1,0 +1,145 @@
+/* ******************************************** */
+/* LOGIN - REGISTER SECTION  */
+/* ******************************************** */
+.authen-section {
+  margin: 9.6rem 0;
+}
+
+.authen-container {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+  box-shadow: 0 0rem 1.6rem rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+
+  /* background-color: #eee; */
+}
+
+/* authentication navigation */
+.authen-nav {
+}
+
+.authen-nav__list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.authen-nav__list li {
+  text-align: center;
+  width: 100%;
+  padding: 1.6rem 3.2rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.authen-nav__item.open {
+  border: 2px solid #99cdcb;
+  border-bottom: none;
+}
+
+.authen-nav__item.close {
+  border-bottom: 2px solid #99cdcb;
+}
+
+.authen-nav__item.open .authen-nav__link {
+  color: #444;
+}
+.authen-nav__link:link,
+.authen-nav__link:visited {
+  text-decoration: none;
+  color: #767676;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  transition: all 0.3s;
+}
+
+.authen-nav__link:hover,
+.authen-nav__link:active {
+  color: #444;
+}
+
+/* authentication form */
+
+.authen-body__login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.authen-form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 2rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control label {
+  color: #555;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.form-control input {
+  border: none;
+  box-shadow: inset 0 0 0 2px #ddd;
+  font-size: 1.4rem;
+  border-radius: 9px;
+  padding: 1rem 1.6rem;
+  color: #555;
+}
+
+.forget-password:link,
+.forget-password:visited {
+  color: #f03e3e;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  border-bottom: 1px solid transparent;
+}
+
+.forget-password:hover,
+.forget-password:active {
+  border-bottom: 1px solid #d83838;
+  color: #d83838;
+}
+
+/* Oauth */
+
+.oauth {
+  border-top: 1px solid #ddd;
+  width: 70%;
+  padding-top: 2.4rem;
+}
+
+.sign-in-with__text {
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.oauth-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+}
+
+.oauth-logo__img {
+  width: 6.4rem;
+  height: 5.4rem;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.oauth-logo__img:hover {
+  transform: scale(1.1);
+}

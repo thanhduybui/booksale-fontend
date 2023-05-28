@@ -16,7 +16,7 @@
   }
   /* Top product sections */
   .tb-img-box {
-    max-width: 70%;
+    max-width: 90%;
     height: 70%;
   }
   /* gallery section */
@@ -26,6 +26,14 @@
 }
 
 @media (max-width: 51em) {
+  .grid-5--columns {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .top-books .top-book:nth-child(5) {
+    display: none;
+  }
+
   .books-container {
     grid-template-columns: repeat(4, 1fr);
   }
