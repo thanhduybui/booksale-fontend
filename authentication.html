@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/query.css" />
     <link rel="stylesheet" href="css/authentication.css" />
+
+    <script defer src="scripts/authen.js"></script>
     <title>The BookSale</title>
   </head>
   <body>
@@ -88,14 +90,15 @@
         <div class="authen-nav margin-bottom-lg">
           <ul class="authen-nav__list">
             <li class="authen-nav__item open">
-              <a class="authen-nav__link" href="#">Đăng nhập</a>
+              <a class="authen-nav__link login" href="#">Đăng nhập</a>
             </li>
-            <li class="authen-nav__item close">
-              <a class="authen-nav__link" href="#">Đăng ký</a>
+            <li class="authen-nav__item">
+              <a class="authen-nav__link register" href="#">Đăng ký</a>
             </li>
           </ul>
         </div>
-        <div class="authen-body__login">
+
+        <div class="authen-body__login show">
           <h3 class="heading-tertiary login-heading">Truy cập tài khoản</h3>
           <form class="authen-form">
             <div class="form-control">
@@ -142,6 +145,42 @@
               />
             </div>
           </div>
+        </div>
+        <div class="authen-body__register">
+          <h3 class="heading-tertiary login-heading">Đăng ký tài khoản</h3>
+          <form class="authen-form">
+            <div class="form-control">
+              <label class="margin-bottom-sm" for="username"
+                >Tên đăng nhập</label
+              >
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="HongBeBong"
+              />
+            </div>
+
+            <div class="form-control">
+              <label class="margin-bottom-sm" for="password"
+                >Mật khẩu mới</label
+              >
+              <input type="password" name="password" id="password" />
+            </div>
+
+            <div class="form-control">
+              <label class="margin-bottom-sm" for="confirm-password"
+                >Nhập lại mật khẩu</label
+              >
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirm-password"
+              />
+            </div>
+
+            <button class="btn btn--radius center">Đăng ký</button>
+          </form>
         </div>
       </div>
     </main>
