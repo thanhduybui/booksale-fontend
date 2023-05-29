@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/query.css" />
+
+    <script defer src="scripts/index.js"></script>
     <title>The BookSale</title>
   </head>
   <body>
@@ -53,13 +55,20 @@
                   ><ion-icon class="cart-icon" name="cart-sharp"></ion-icon
                 ></a>
               </li>
-              <li class="main-nav-item">
-                <a class="user header-link" href="#"
+              <li class="main-nav-item dropdown">
+                <a class="user header-link dropdown-toggle" href="#"
                   ><img
                     class="profile-img"
                     src="imgs/user.png"
                     alt="User's profile photo"
                 /></a>
+                <ul class="user-list dropdown-menu">
+                  <li>
+                    <a class="user-list__link" href="#">Thông tin cá nhân</a>
+                  </li>
+                  <li><a class="user-list__link" href="#">Đổi mật khẩu</a></li>
+                  <li><a class="user-list__link" href="#">Đăng xuất</a></li>
+                </ul>
               </li>
             </ul>
           </nav>
@@ -68,8 +77,22 @@
         <nav class="navigation">
           <div class="container">
             <ul class="nav-list">
-              <li class="">
-                <a href="#" class="nav-link">Danh mục</a>
+              <li class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Danh mục</a>
+                <ul class="category-dropdown dropdown-menu">
+                  <li>
+                    <a class="category-link" href="#">Tiểu thuyết - văn học</a>
+                  </li>
+                  <li><a class="category-link" href="#">Sách kinh tế</a></li>
+                  <li><a class="category-link" href="#">Sách khoa học</a></li>
+                  <li><a class="category-link" href="#">Sách self-help</a></li>
+                  <li>
+                    <a class="category-link" href="#">Sách tâm lí tội phạm</a>
+                  </li>
+                  <li><a class="category-link" href="#">Sách thiếu nhi</a></li>
+                  <li><a class="category-link" href="#">Sách bán chạy</a></li>
+                  <li><a class="category-link" href="#">Sách mới</a></li>
+                </ul>
               </li>
               <li><a href="#" class="nav-link">Sách mới</a></li>
               <li><a href="#" class="nav-link">Sách bán chạy</a></li>
@@ -188,6 +211,7 @@
                   <p class="tb-author">Vũ Trọng Phụng</p>
                 </div>
               </div>
+            </div>
           </section>
           <!-- PRODUCT SECTION -->
           <section class="products">

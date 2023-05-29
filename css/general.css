@@ -24,6 +24,7 @@ LINE HIGH
 - for normal text: 
 
 SHADOW
+ box-shadow: 0 0rem 1.6rem rgba(0, 0, 0, 0.07);
 
 FONT-WEIGHT
 
@@ -227,4 +228,53 @@ body {
 
 .hidden {
   display: none;
+}
+
+/* dropdown menu */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  color: #333;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #fff;
+  box-shadow: 0 0rem 1.8rem rgba(0, 0, 0, 0.1);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition: all 0.4s ease-in;
+}
+
+.dropdown-menu li {
+  padding: 1rem;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.drop .dropdown-menu {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
 }

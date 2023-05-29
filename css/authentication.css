@@ -55,6 +55,11 @@
   transition: all 0.3s;
 }
 
+.authen-nav__link {
+  outline: none;
+  box-shadow: none;
+}
+
 .authen-nav__link:hover,
 .authen-nav__link:active {
   color: #444;
