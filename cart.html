@@ -13,16 +13,15 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/query.css" />
-    <link rel="stylesheet" href="css/authentication.css" />
+    <link rel="stylesheet" href="css/cart.css" />
 
     <script defer src="scripts/index.js"></script>
-    <script defer src="scripts/authen.js"></script>
     <title>The BookSale</title>
   </head>
   <body>
     <!-- HEADER -->
     <header>
-      <section class="header margin-bottom-sm">
+      <section class="header">
         <div class="search-bar grid header-grid">
           <button class="btn-mobile-nav">
             <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
@@ -107,131 +106,142 @@
           </div>
         </nav>
       </section>
-
-      <section class="section-slider container">
-        <div class="slider">
-          <img
-            class="slider-img"
-            src="imgs/slider/new-books.png"
-            alt="New books"
-          />
-
-          <button class="btn-circle btn-left">
-            <ion-icon name="chevron-back-outline"></ion-icon>
-          </button>
-          <button class="btn-circle btn-right">
-            <ion-icon name="chevron-forward-outline"></ion-icon>
-          </button>
-
-          <div class="dots">
-            <div class="dot dot--current"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
-        </div>
-      </section>
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="authen-section">
-      <div class="authen-container">
-        <div class="authen-nav margin-bottom-lg">
-          <ul class="authen-nav__list">
-            <li class="authen-nav__item open">
-              <a class="authen-nav__link login" href="#">Đăng nhập</a>
-            </li>
-            <li class="authen-nav__item">
-              <a class="authen-nav__link register" href="#">Đăng ký</a>
-            </li>
-          </ul>
-        </div>
+    <main>
+      <section class="cart-section">
+        <h2 class="container heading-secondary cart-title margin-bottom-super">
+          Giỏ hàng
+        </h2>
 
-        <div class="authen-body__login show">
-          <h3 class="heading-tertiary login-heading">Truy cập tài khoản</h3>
-          <form class="authen-form" method="post" action="#">
-            <div class="form-control">
-              <label class="margin-bottom-sm" for="username"
-                >Tên đăng nhập</label
-              >
-              <input
-                type="text"
-                name="username"
-                id="username"
-                placeholder="HongBeBong"
-              />
+        <div class="container grid cart-grid">
+          <div class="cart-books">
+            <div class="cart-book">
+              <form action="#" class="cart-book__form">
+                <input type="checkbox" class="checkbox margin-right-md" />
+                <div class="img-box margin-right-sm">
+                  <img
+                    class="cart-img"
+                    src="imgs/top-books/book1.jpeg"
+                    alt="Cay cam ngot cua toi"
+                  />
+                </div>
+                <p class="cart-book-title margin-right-super">
+                  Cây cam ngọt của tôi
+                </p>
+
+                <div class="price-tag margin-right-super">
+                  <p class="price-tag__sale">67.000<span>đ</span></p>
+                  <p class="price-tag__origin">100.000<span>đ</span></p>
+                </div>
+                <div class="quantity-box__cart quantity-box margin-right-super">
+                  <button class="btn-decrease">-</button>
+                  <input type="number" min="0" value="0" />
+                  <button class="btn-increase">+</button>
+                </div>
+                <button type="submit" class="btn-detele-item">
+                  <ion-icon class="delete-icon" name="trash-outline"></ion-icon>
+                </button>
+              </form>
             </div>
+            <div class="cart-book">
+              <form action="#" class="cart-book__form">
+                <input type="checkbox" class="checkbox margin-right-md" />
+                <div class="img-box margin-right-sm">
+                  <img
+                    class="cart-img"
+                    src="imgs/top-books/book1.jpeg"
+                    alt="Cay cam ngot cua toi"
+                  />
+                </div>
+                <p class="cart-book-title margin-right-super">
+                  Cây cam ngọt của tôi
+                </p>
 
-            <div class="form-control">
-              <label class="margin-bottom-sm" for="password">Mật khẩu</label>
-              <input type="password" name="password" id="password" />
+                <div class="price-tag margin-right-super">
+                  <p class="price-tag__sale">67.000<span>đ</span></p>
+                  <p class="price-tag__origin">100.000<span>đ</span></p>
+                </div>
+                <div class="quantity-box__cart quantity-box margin-right-super">
+                  <button class="btn-decrease">-</button>
+                  <input type="number" min="0" value="0" />
+                  <button class="btn-increase">+</button>
+                </div>
+                <button type="submit" class="btn-detele-item">
+                  <ion-icon class="delete-icon" name="trash-outline"></ion-icon>
+                </button>
+              </form>
             </div>
+            <div class="cart-book">
+              <form action="#" class="cart-book__form">
+                <input type="checkbox" class="checkbox margin-right-md" />
+                <div class="img-box margin-right-sm">
+                  <img
+                    class="cart-img"
+                    src="imgs/top-books/book1.jpeg"
+                    alt="Cay cam ngot cua toi"
+                  />
+                </div>
+                <p class="cart-book-title margin-right-super">
+                  Cây cam ngọt của tôi
+                </p>
 
-            <button class="btn btn--radius center">Đăng nhập</button>
-            <a href="#" class="forget-password center">Quên mật khẩu ?</a>
-          </form>
-
-          <div class="oauth">
-            <h4 class="sign-in-with__text heading-4">Đăng nhập với...</h4>
-
-            <div class="oauth-logos">
-              <img
-                class="oauth-logo__img"
-                src="imgs/oauth-logos/google.jpeg"
-                alt="google logo"
-              />
-
-              <img
-                class="oauth-logo__img"
-                src="imgs/oauth-logos/facebook.jpeg"
-                alt="facebook logo"
-              />
-
-              <img
-                class="oauth-logo__img"
-                src="imgs/oauth-logos/twitter.jpeg"
-                alt="twitter logo"
-              />
+                <div class="price-tag margin-right-super">
+                  <p class="price-tag__sale">67.000<span>đ</span></p>
+                  <p class="price-tag__origin">100.000<span>đ</span></p>
+                </div>
+                <div class="quantity-box__cart quantity-box margin-right-super">
+                  <button class="btn-decrease">-</button>
+                  <input type="number" min="0" value="0" />
+                  <button class="btn-increase">+</button>
+                </div>
+                <button type="submit" class="btn-detele-item">
+                  <ion-icon class="delete-icon" name="trash-outline"></ion-icon>
+                </button>
+              </form>
             </div>
           </div>
+          <aside class="customer-info">
+            <div class="address-box">
+              <div class="address-header">
+                <p class="address-heading">Giao tới</p>
+                <a href="#" class="change-address__link">Thay đổi</a>
+              </div>
+              <div class="info">
+                <p class="info-name padding-r-md">Bùi Thanh Duy</p>
+                <p class="info-phone padding-l-md">0383314133</p>
+              </div>
+              <address class="info-address">
+                <span>Nhà</span>
+                1/2 đường số 7, Phường Bình Thọ, Thành phố Thủ Đức, Hồ Chí Minh
+              </address>
+            </div>
+            <div class="total-price-section">
+              <h2 class="price-title">Thanh toán</h2>
+              <div class="subtotal">
+                <span>Tạm tính:</span>
+                <span>100.000đ</span>
+              </div>
+              <div class="shipping">
+                <span>Phí ship:</span>
+                <span>15.000đ</span>
+              </div>
+              <div class="discount">
+                <span>Giảm giá:</span>
+                <span>-30.000đ</span>
+              </div>
+              <div class="total">
+                <span>Tổng tiền:</span>
+                <span>85.000đ</span>
+              </div>
+            </div>
+            <button class="btn btn--radius btn-order">Đặt sách</button>
+          </aside>
         </div>
-        <div class="authen-body__register">
-          <h3 class="heading-tertiary login-heading">Đăng ký tài khoản</h3>
-          <form class="authen-form">
-            <div class="form-control">
-              <label class="margin-bottom-sm" for="username"
-                >Tên đăng nhập</label
-              >
-              <input
-                type="text"
-                name="username"
-                id="username"
-                placeholder="HongBeBong"
-              />
-            </div>
-
-            <div class="form-control">
-              <label class="margin-bottom-sm" for="password"
-                >Mật khẩu mới</label
-              >
-              <input type="password" name="password" id="password" />
-            </div>
-
-            <div class="form-control">
-              <label class="margin-bottom-sm" for="confirm-password"
-                >Nhập lại mật khẩu</label
-              >
-              <input
-                type="password"
-                name="confirmPassword"
-                id="confirm-password"
-              />
-            </div>
-
-            <button class="btn btn--radius center">Đăng ký</button>
-          </form>
-        </div>
-      </div>
+      </section>
     </main>
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container grid grid--footer">

@@ -187,6 +187,18 @@ body {
   margin-right: 0.8rem;
 }
 
+.margin-right-md {
+  margin-right: 2.4rem;
+}
+
+.margin-right-lg {
+  margin-right: 3.2rem;
+}
+
+.margin-right-super {
+  margin-right: 6.4rem;
+}
+
 .margin-bottom-sm {
   margin-bottom: 0.8rem;
 }
@@ -196,6 +208,10 @@ body {
 
 .margin-bottom-lg {
   margin-bottom: 3.2rem;
+}
+
+.margin-bottom-super {
+  margin-bottom: 4.8rem;
 }
 
 .padding-r-sm {
@@ -224,10 +240,6 @@ body {
 
 .center {
   margin: 0 auto;
-}
-
-.hidden {
-  display: none;
 }
 
 /* dropdown menu */
@@ -277,4 +289,65 @@ body {
   visibility: visible;
 
   pointer-events: auto;
+}
+
+/* quantity box */
+
+.quantity-box {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-box input {
+  height: 3.2rem;
+  text-align: center;
+  border-top: 1px solid #00817e;
+  border-bottom: 1px solid #00817e;
+  border-right: none;
+  border-left: none;
+}
+
+.quantity input[type="number"] {
+  /* Styles for the number input */
+  /* For example, you can change the text color and font size */
+  color: #333;
+  font-size: 1.6rem;
+}
+
+.quantity-box input[type="number"]::-webkit-inner-spin-button,
+.quantity-box input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn-decrease,
+.btn-increase {
+  width: 3.2rem;
+  height: 3.2rem;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  background-color: #00817e;
+}
+
+.btn-decrease {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.btn-increase {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.checkbox {
+  border: 1px solid #eee;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.cart-books *:focus {
+  outline: none;
+  box-shadow: none;
 }

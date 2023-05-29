@@ -1,0 +1,176 @@
+/* ******************************************** */
+/* CART */
+/* ******************************************** */
+.cart-section {
+  padding: 4.8rem 0;
+  background-color: #f7f7f7;
+}
+
+.cart-grid {
+  grid-template-columns: 3.5fr 1.5fr;
+}
+
+.cart-books {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 2.4rem;
+  border-radius: 10px;
+}
+
+.cart-book {
+  padding-bottom: 2.4rem;
+}
+
+.cart-title {
+  align-self: center;
+}
+
+.cart-book__form {
+  display: flex;
+  align-items: center;
+}
+
+.cart-img {
+  width: 6.4rem;
+  height: auto;
+}
+
+.cart-book-title {
+  font-size: 1.6rem;
+}
+
+.price-tag {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.price-tag__sale {
+  font-size: 1.6rem;
+  color: #444;
+}
+
+.price-tag__origin {
+  font-size: 1.4rem;
+  color: #767676;
+  text-decoration: line-through;
+}
+
+.quantity-box__cart input {
+  width: 5rem;
+}
+
+.delete-icon {
+  color: #767676;
+  width: 2rem;
+  height: 2rem;
+}
+
+.btn-detele-item {
+  border: none;
+  background-color: transparent;
+}
+
+/* customer-infor */
+.customer-info {
+}
+
+.address-box {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 2.4rem;
+  border-radius: 10px;
+}
+
+.address-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.address-heading {
+  font-size: 1.8rem;
+  color: #767676;
+  font-weight: 500;
+}
+
+.change-address__link:link,
+.change-address__link:visited {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #1a8e8b;
+
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.change-address__link:hover,
+.change-address__link:active {
+  color: #00817e;
+  border-bottom: 1px solid #00817e;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.info-name,
+.info-phone {
+  font-size: 1.6rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.info-name {
+  border-right: 2px solid #555;
+}
+
+.info-address {
+  color: #767676;
+  font-size: 1.4rem;
+}
+
+.btn-order {
+  display: block;
+  margin: 2.4rem auto;
+  width: 80%;
+}
+
+/* total price section */
+
+.total-price-section {
+  margin-top: 2.4rem;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2.4rem;
+}
+
+.price-title {
+  font-size: 1.8rem;
+  color: #444;
+  margin-bottom: 2.4rem;
+}
+
+.total-price-section .subtotal,
+.total-price-section .shipping,
+.total-price-section .discount,
+.total-price-section .total {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.8rem;
+}
+
+.total {
+  padding: 2.4rem 0 0 0;
+  border-top: 1px solid #eee;
+}
+
+.total-price-section .total span {
+  font-weight: bold;
+}

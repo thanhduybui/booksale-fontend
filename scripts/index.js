@@ -12,3 +12,11 @@ dropdownEls.forEach((el) => {
     el.classList.remove("drop");
   });
 });
+
+// handle btn mobile
+const btnMobile = document.querySelector(".btn-mobile-nav");
+
+btnMobile.addEventListener("click", () => {
+  const nav = document.querySelector(".navigation").parentElement;
+  nav.classList.toggle("nav-open");
+});
