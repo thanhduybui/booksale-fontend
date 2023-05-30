@@ -291,7 +291,7 @@ body {
   pointer-events: auto;
 }
 
-/* quantity box */
+/* QUANTITY BOX */
 
 .quantity-box {
   display: flex;
@@ -350,4 +350,123 @@ body {
 .cart-books *:focus {
   outline: none;
   box-shadow: none;
+}
+
+/* SIDEBAR */
+.sidebar {
+  margin-top: 7.4rem;
+  background-color: #fff;
+  padding: 0rem 0 2.4rem;
+  align-self: start;
+  border-radius: 10px;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu-link {
+  display: flex;
+  align-items: center;
+  padding: 1.6rem 2.4rem;
+  color: #555;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: all 0.3s;
+}
+
+.sidebar-menu-link:hover {
+  color: #00817e;
+}
+
+.sub-items {
+  list-style-type: none;
+  margin-left: 4rem;
+}
+
+.sub-item-link:link,
+.sub-item-link:visited {
+  font-size: 1.4rem;
+  display: block;
+  padding: 1rem;
+  color: #555;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.sub-item-link:hover,
+.sub-item-link:active {
+  color: #00817e;
+}
+
+.start-icon {
+  margin-right: 0.8rem;
+}
+
+.end-icon {
+  margin-left: auto;
+}
+
+.end-icon ion-icon[name="chevron-down-sharp"] {
+  display: none;
+}
+
+.sidebar-menu-link .start-icon {
+  color: #00817e;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.pagination-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  background-color: transparent;
+  color: #555;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pagination-btn:hover {
+  color: #00817e;
+}
+
+.pagination-btn.prev,
+.pagination-btn.next {
+  background-color: #00817e;
+  color: #fff;
+}
+
+.pagination-btn.prev:hover,
+.pagination-btn.next:hover {
+  background-color: #005c59;
+}
+
+.pagination-btn ion-icon {
+  font-size: 1.8rem;
+}
+
+.pagination-btn.active {
+  color: #00817e;
+  font-weight: 600;
 }
