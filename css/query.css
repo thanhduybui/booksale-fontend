@@ -129,4 +129,56 @@
     outline: none;
     box-shadow: none;
   }
+
+  /* implement search button */
+}
+
+@media (max-width: 41em) {
+  .slider-container {
+    margin: 0 auto;
+    max-width: 70rem;
+    height: 40rem;
+  }
+
+  .books-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tb-img-box {
+    max-width: 100%;
+    height: 70%;
+  }
+
+  .top-books {
+    text-align: center;
+  }
+
+  .tb-title {
+    font-size: 1.6rem;
+  }
+
+  .tb-author {
+    font-size: 1.2rem;
+    color: #007471;
+  }
+}
+
+@media (max-width: 31em) {
+  .books-container,
+  .top-books {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bs-img-box {
+    grid-column: 1 / -1;
+  }
+
+  .top-book {
+    text-align: center;
+  }
+  .tb-img-box {
+    margin: 0 auto 2.4rem;
+    max-width: 70%;
+    height: 70%;
+  }
 }

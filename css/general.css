@@ -94,12 +94,6 @@ body {
   grid-template-columns: repeat(5, 1fr);
 }
 
-.grid-6--columns {
-  grid-template-columns: repeat(6, 1fr);
-  column-gap: 4.8rem;
-  row-gap: 2.4rem;
-}
-
 .btn {
   font-size: 1.6rem;
   font-weight: 700;
