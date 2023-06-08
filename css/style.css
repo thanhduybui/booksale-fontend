@@ -19,6 +19,7 @@ header {
 .search-bar {
   padding: 2.4rem 9.6rem 1.2rem 9.6rem;
   width: 100%;
+  height: 8.6rem;
   background-color: #00817e;
 }
 
@@ -46,6 +47,7 @@ header {
   align-items: center;
   gap: 4.8rem;
 }
+
 .main-nav {
   display: flex;
   align-items: center;
@@ -93,15 +95,17 @@ header {
   gap: 4.8rem;
 }
 
-.btn-mobile-nav {
+.btn-mobile-nav,
+.btn-close-search {
   border: none;
   background: none;
   cursor: pointer;
-  display: none;
   width: 4.8rem;
+  display: none;
 }
 
-.icon-mobile-nav {
+.icon-mobile-nav,
+.icon-close-form {
   height: 4.8rem;
   width: 4.8rem;
   color: #fff;
@@ -160,9 +164,13 @@ header {
   transition: all 0.4s;
 }
 
-.search-icon {
+.search-form {
   position: relative;
 }
+
+/* .search-icon {
+  position: relative;
+} */
 
 .search-icon ion-icon {
   color: #838383;

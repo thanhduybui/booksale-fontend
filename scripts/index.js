@@ -1,3 +1,4 @@
+// ****************************************************************
 // for dropdown menu
 const dropdownEls = document.querySelectorAll(".dropdown");
 
@@ -13,7 +14,8 @@ dropdownEls.forEach((el) => {
   });
 });
 
-// handle btn mobile
+// ****************************************************************
+// HANDLE BTN NAV MOBILE
 const btnMobile = document.querySelector(".btn-mobile-nav");
 
 btnMobile.addEventListener("click", () => {
@@ -21,6 +23,23 @@ btnMobile.addEventListener("click", () => {
   nav.classList.toggle("nav-open");
 });
 
+// ****************************************************************
+// HANDLE btn for mobile search bar
+const btnMobileSearch = document.querySelector(".btn-search-mobile");
+const btnCloseSearch = document.querySelector(".btn-close-search");
+const searchBar = document.querySelector(".search-bar");
+
+btnMobileSearch.addEventListener("click", () => {
+  searchBar.classList.add("open");
+});
+
+btnCloseSearch.addEventListener("click", () => {
+  searchBar.classList.remove("open");
+});
+
+btnCloseSearch.addEventListener("click", () => {});
+
+// ****************************************************************
 // slider
 const sliderHandler = function () {
   const slides = document.querySelectorAll(".slide");

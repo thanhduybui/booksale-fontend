@@ -42,10 +42,6 @@
     grid-template-columns: 1.5fr 2.5fr 1.5fr;
   }
 
-  .search-form {
-    display: none;
-  }
-
   .header-left {
     align-items: center;
     justify-content: center;
@@ -81,7 +77,7 @@
 
   .nav-open .icon-mobile-nav[name="close-outline"] {
     display: block;
-    z-index: 1000;
+    z-index: 8;
     color: #333;
   }
 
@@ -89,11 +85,7 @@
     display: flex;
     justify-items: center;
     justify-content: center;
-    z-index: 2222;
-  }
-
-  .btn-search-mobile {
-    display: block;
+    z-index: 7;
   }
 
   .nav-open .icon-mobile-nav[name="menu-outline"] {
@@ -131,6 +123,65 @@
   }
 
   /* implement search button */
+
+  .btn-search-mobile {
+    display: block;
+  }
+
+  .search-form {
+    padding: 2.4rem 0 2.4rem 9.6rem;
+    height: 8.6rem;
+    position: absolute;
+    background-color: #00817e;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in;
+
+    /* 1. hide visually */
+    opacity: 0;
+
+    /* 2. Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3. hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .open .search-form {
+    opacity: 1;
+    transform: translateY(0%);
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .open .search-icon {
+    display: none;
+  }
+
+  .search-form input {
+    padding: 1.6rem;
+  }
+
+  /* .btn-mobile-nav,
+  .header-left,
+  .main-nav {
+    display: none;
+  } */
+
+  .btn-close-search {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 2.4rem;
+  }
 }
 
 @media (max-width: 41em) {
