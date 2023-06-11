@@ -215,6 +215,10 @@
 }
 
 @media (max-width: 31em) {
+  html {
+    font-size: 43.75%;
+  }
+
   .books-container,
   .top-books {
     grid-template-columns: repeat(2, 1fr);
@@ -231,5 +235,10 @@
     margin: 0 auto 2.4rem;
     max-width: 70%;
     height: 70%;
+  }
+
+  .grid--footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 6.4rem;
   }
 }

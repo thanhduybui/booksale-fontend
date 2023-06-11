@@ -10,6 +10,11 @@
   grid-template-columns: 3.5fr 1.5fr;
 }
 
+.cart-section *:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .cart-books {
   background-color: #fff;
   display: flex;
@@ -39,6 +44,7 @@
 
 .cart-book-title {
   font-size: 1.6rem;
+  min-width: 10rem;
 }
 
 .price-tag {
@@ -62,20 +68,18 @@
   width: 5rem;
 }
 
+.btn-detele-item {
+  border: none;
+  background-color: transparent;
+}
+
 .delete-icon {
   color: #767676;
   width: 2rem;
   height: 2rem;
 }
 
-.btn-detele-item {
-  border: none;
-  background-color: transparent;
-}
-
 /* customer-infor */
-.customer-info {
-}
 
 .address-box {
   background-color: #fff;
@@ -173,4 +177,94 @@
 
 .total-price-section .total span {
   font-weight: bold;
+}
+
+/* ******************************************** */
+/* PAYMENT METHOD */
+/* ******************************************** */
+.payment-method {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2.4rem;
+  margin-top: 2.4rem;
+}
+
+.payment-method-title {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.payment-method-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.payment-method-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.payment-method-option-text {
+  font-size: 1.4rem;
+}
+
+/* ******************************************** */
+/* REPONSIVE FOR CART */
+/* ******************************************** */
+
+@media (max-width: 62em) {
+  .price-tag {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cart-book__form {
+    display: flex;
+  }
+
+  .btn-detele-item {
+    margin: auto;
+  }
+}
+
+@media (max-width: 51em) {
+  .cart-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.4rem;
+  }
+
+  .payment-method {
+    margin-top: 0;
+  }
+
+  .total-price-section {
+    grid-column: 1/-1;
+  }
+
+  .btn-order {
+    grid-column: 1/-1;
+  }
+
+  .quantity-box__cart {
+    margin: auto;
+  }
+}
+
+@media (max-width: 35em) {
+  .quantity-box__cart {
+    margin-right: 2.4rem;
+  }
+
+  .btn-order {
+    display: block;
+    margin: 2.4rem auto;
+    width: 50%;
+  }
 }
