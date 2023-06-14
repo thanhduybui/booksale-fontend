@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,9 +14,10 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/query.css" />
     <link rel="stylesheet" href="css/authentication.css" />
+    <link rel="stylesheet" href="css/user-form.css" />
 
     <script defer src="scripts/index.js"></script>
-    <title>Sign up Page</title>
+    <title>User Info</title>
   </head>
   <body>
     <!-- HEADER -->
@@ -113,76 +114,85 @@
       </section>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="authen-section">
-      <div class="authen-container">
-        <div class="authen-nav margin-bottom-lg">
-          <ul class="authen-nav__list">
-            <li class="authen-nav__item">
-              <a class="authen-nav__link login" href="login.html">Đăng nhập</a>
-            </li>
-            <li class="authen-nav__item open">
-              <a class="authen-nav__link register" href="register.html"
-                >Đăng ký</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="authen-body__register">
-          <h3 class="heading-tertiary login-heading">Đăng ký tài khoản</h3>
-
-          <!-- FORM REGISTER-->
-          <form class="authen-form" action="#" method="POST">
-            <div class="error-msg-box">
-              <p class="error-msg">Bi ngu roi</p>
-            </div>
+    <main class="user-info-container">
+      <h2 class="heading-secondary">Chỉnh sửa thông tin cá nhân</h2>
+      <form action="#" method="POST" class="address-form">
+        <div class="form-sections">
+          <div class="form-group">
             <div class="form-control">
-              <label class="margin-bottom-sm" for="fullName">Họ và tên</label>
+              <label for="fullName">Tên hiển thị</label>
               <input
                 type="text"
-                name="fullName"
+                class="user-name"
                 id="fullName"
-                th:field="*{fullName}"
-                placeholder="Bui Thanh Duy"
+                name="fullName"
+                required
               />
             </div>
 
             <div class="form-control">
-              <label class="margin-bottom-sm" for="email"
-                >Email đăng nhập</label
-              >
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="dtb174@gmail.com"
-              />
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
             </div>
 
             <div class="form-control">
-              <label class="margin-bottom-sm" for="password"
-                >Mật khẩu mới</label
-              >
-              <input type="password" name="password" id="password" />
+              <label for="phone">Số điện thoại</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+          </div>
+
+          <div class="address-group">
+            <div class="form-control">
+              <label for="province">Tỉnh / Thành phố</label>
+              <select id="province" name="province" required>
+                <option value="">Chọn tỉnh (thành phố)</option>
+                <option value="province1">Province 1</option>
+                <option value="province2">Province 2</option>
+                <!-- Add more options as needed -->
+              </select>
             </div>
 
             <div class="form-control">
-              <label class="margin-bottom-sm" for="confirm-password"
-                >Nhập lại mật khẩu</label
-              >
-              <input
-                type="password"
-                name="confirm-password"
-                id="confirm-password"
-              />
+              <label for="district">Quận / Huyện</label>
+              <select id="district" name="district" required>
+                <option value="">Chọn quận (huyện)</option>
+                <option value="district1">District 1</option>
+                <option value="district2">District 2</option>
+                <!-- Add more options as needed -->
+              </select>
             </div>
 
-            <button type="submit" class="btn btn--radius center">
-              Đăng ký
-            </button>
-          </form>
+            <div class="form-control">
+              <label for="city">Phường / Xã</label>
+              <select id="city" name="city" required>
+                <option value="">Chọn phường (xã)</option>
+                <option value="city1">City 1</option>
+                <option value="city2">City 2</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+
+            <div class="form-control">
+              <label for="street">Đường</label>
+              <input type="text" id="street" name="street" />
+            </div>
+
+            <div class="form-control">
+              <label for="description">Thêm mô tả</label>
+              <textarea
+                type="textarea"
+                id="description"
+                name="description"
+                rows="4"
+                cols="30"
+              ></textarea>
+            </div>
+          </div>
         </div>
-      </div>
+        <button type="submit" class="btn btn--radius btn-user-info">
+          Cập nhật
+        </button>
+      </form>
     </main>
 
     <!-- FOOTER -->
@@ -244,14 +254,5 @@
         </nav>
       </div>
     </footer>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>
