@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/user-form.css" />
 
     <script defer src="scripts/index.js"></script>
+    <script defer src="scripts/user.js"></script>
     <title>User Info</title>
   </head>
   <body>
@@ -156,25 +157,21 @@
               <label for="district">Quận / Huyện</label>
               <select id="district" name="district" required>
                 <option value="">Chọn quận (huyện)</option>
-                <option value="district1">District 1</option>
-                <option value="district2">District 2</option>
                 <!-- Add more options as needed -->
               </select>
             </div>
 
             <div class="form-control">
               <label for="city">Phường / Xã</label>
-              <select id="city" name="city" required>
+              <select id="ward" name="ward" required>
                 <option value="">Chọn phường (xã)</option>
-                <option value="city1">City 1</option>
-                <option value="city2">City 2</option>
                 <!-- Add more options as needed -->
               </select>
             </div>
 
             <div class="form-control">
               <label for="street">Đường</label>
-              <input type="text" id="street" name="street" />
+              <input type="text" id="street" name="street" required />
             </div>
 
             <div class="form-control">
