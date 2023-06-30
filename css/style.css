@@ -266,6 +266,25 @@ header {
 }
 
 /* ******************************************** */
+/* STICKY NAVIGATION  */
+/* ******************************************** */
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2000;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-shadow: 0 0rem 1.6rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .section-slider {
+  margin-top: 14rem;
+}
+
+/* ******************************************** */
 /* SLIDER  */
 /* ******************************************** */
 

@@ -113,7 +113,7 @@ const sliderHandler = function () {
 
 sliderHandler();
 
-// Load data books based on url
+// LOAD DATA FROM DATA FROM APIs
 
 const booksLinkEl = document.querySelectorAll(".bs-link");
 
@@ -129,8 +129,8 @@ booksLinkEl.forEach((link) => {
 });
 
 //remove book cards
-const removeBookCards = () => {
-  const bookCards = document.querySelectorAll(".book-card");
+const removeBookCards = (container) => {
+  const bookCards = container.querySelectorAll(".book-card");
 
   bookCards.forEach((card) => {
     card.remove();
@@ -138,13 +138,12 @@ const removeBookCards = () => {
 };
 
 function loadDataBooks(url, container) {
-  console.log(container);
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
       // Update the booksContainer with the retrieved data
       const insertHtml = data.map((book) => renderCard(book)).join("");
-      removeBookCards();
+      removeBookCards(container);
       container.insertAdjacentHTML("beforeend", insertHtml);
     })
     .catch((error) => {
@@ -191,14 +190,39 @@ const categoryLinkEl = document.querySelectorAll(".bs-link");
 
 categoryLinkEl.forEach((link) => {
   link.addEventListener("click", (event) => {
-    removeSelectedLinks();
+    const listContainer = event.target.closest(".bookshelf-list");
+    removeSelectedLinks(listContainer);
     event.target.parentElement.classList.add("selected");
   });
 });
 
 // remove current selected link
-function removeSelectedLinks() {
-  categoryLinkEl.forEach((link) => {
+function removeSelectedLinks(listContainer) {
+  console.log(listContainer);
+  listContainer.querySelectorAll(".bs-link").forEach((link) => {
     link.parentElement.classList.remove("selected");
   });
 }
+
+// sticky navigation
+
+const sectionSliderEl = document.querySelector(".section-slider");
+const obs = new IntersectionObserver(
+  (entries) => {
+    const ent = entries[0];
+
+    if (!ent.isIntersecting) {
+      document.querySelector("header").classList.add("sticky");
+    }
+    if (ent.isIntersecting) {
+      document.querySelector("header").classList.remove("sticky");
+    }
+  },
+  {
+    // in the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-180px",
+  }
+);
+obs.observe(sectionSliderEl);
