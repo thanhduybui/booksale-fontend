@@ -379,6 +379,11 @@ body {
 .sub-items {
   list-style-type: none;
   margin-left: 4rem;
+  display: none;
+}
+
+.show-sub-items .sub-items {
+  display: block;
 }
 
 .sub-item-link:link,
@@ -392,7 +397,7 @@ body {
   transition: all 0.3s;
 }
 
-.sub-item-link:hover,
+.drop-sub-item .sub-item-link:hover,
 .sub-item-link:active {
   color: #00817e;
 }

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/book.css" />
 
     <script defer src="scripts/index.js"></script>
+    <script defer src="scripts/book.js"></script>
     <title>The BookSale</title>
   </head>
   <body>
@@ -122,7 +123,7 @@
               >
             </li>
             <!-- dynamic part -->
-            <li class="sidebar-menu-item">
+            <li class="sidebar-menu-item category-item">
               <a class="sidebar-menu-link">
                 <ion-icon class="start-icon" name="grid-sharp"></ion-icon
                 ><span>Danh mục</span>
@@ -161,6 +162,7 @@
             </li>
           </ul>
         </nav>
+
         <div class="category-books">
           <h2 class="heading-secondary margin-bottom-super">
             Tiểu thuyết văn học
@@ -421,17 +423,21 @@
           </div>
 
           <div class="pagination">
-            <a href="#" class="pagination-btn prev"
-              ><ion-icon name="chevron-back-outline"></ion-icon
-            ></a>
-            <a href="#" class="pagination-btn active">1</a>
-            <a href="#" class="pagination-btn">2</a>
-            <a href="#" class="pagination-btn">3</a>
-            <a href="#" class="pagination-btn">4</a>
-            <a class="pagination-btn">...</a>
-            <a href="#" class="pagination-btn next"
-              ><ion-icon name="chevron-forward-outline"></ion-icon
-            ></a>
+            <button class="pagination-btn prev">
+              <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+
+            <div class="pages">
+              <a href="#" class="pagination-btn active">1</a>
+              <a href="#" class="pagination-btn">2</a>
+              <a href="#" class="pagination-btn">3</a>
+              <a href="#" class="pagination-btn">4</a>
+              <a class="pagination-btn">...</a>
+            </div>
+
+            <button class="pagination-btn next">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
           </div>
         </div>
       </div>
