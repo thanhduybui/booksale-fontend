@@ -142,6 +142,7 @@ function loadDataBooks(url, container) {
     .then((response) => response.json())
     .then((data) => {
       // Update the booksContainer with the retrieved data
+      console.log(data);
       const insertHtml = data.map((book) => renderCard(book)).join("");
       removeBookCards(container);
       container.insertAdjacentHTML("beforeend", insertHtml);
@@ -226,3 +227,5 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(sectionSliderEl);
+
+//
