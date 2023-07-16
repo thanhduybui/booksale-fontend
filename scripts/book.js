@@ -4,7 +4,6 @@ categoryLink.addEventListener("click", () => {
   categoryLink.classList.toggle("show-sub-items");
 });
 
-// PAGINATION IMPLEMENTATION
 document.addEventListener("DOMContentLoaded", () => {
   let currentPage = 1; // Current page number
   let totalPages = 10; // Total number of pages
@@ -14,17 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const paginationContainer = document.querySelector(".pages");
   const container = document.querySelector(".books");
 
-  // call this method to load data in the beginning
+  const path = prevButton.getAttribute("path");
+
+  console.log(path);
+
   loadDataCategoryBooks(
-    "http://localhost:8080/booksale/api/book/category/tieu-thuyet?page=0",
+    `http://localhost:8080/booksale/api/book/category/${path}?page=0`,
     container
   );
 
   const updatePage = () => {
     generatePaginationButtons();
-    // Perform actions to update the page content based on the current page number
-    // You can make an AJAX request, update the URL, or perform any necessary actions
-    // For example, you can update the active class on the pagination buttons based on the current page
     const paginationButtons =
       paginationContainer.querySelectorAll(".pagination-btn");
     paginationButtons.forEach((button) => {
@@ -47,23 +46,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (showStartEllipsis) {
       if (startPage == 2) {
-        buttonMarkup += `<a class="pagination-btn" page="1" path="tieu-thuyet">1</a>`;
+        buttonMarkup += `<a class="pagination-btn" page="1" path="${path}">1</a>`;
       } else {
-        buttonMarkup += `<a  class="pagination-btn" page="1" path="tieu-thuyet">1</a><a class="pagination-btn">...</a>`;
+        buttonMarkup += `<a class="pagination-btn" page="1" path="${path}">1</a><a class="pagination-btn">...</a>`;
       }
     }
 
     for (let i = startPage; i <= endPage; i++) {
       buttonMarkup += `<a class="pagination-btn${
         i === currentPage ? " active" : ""
-      }" page="${i}" path="tieu-thuyet">${i}</a>`;
+      }" page="${i}" path="${path}">${i}</a>`;
     }
 
     if (showEndEllipsis) {
       if (endPage == totalPages - 1) {
-        buttonMarkup += `<a  class="pagination-btn" path="tieu-thuyet" page=${totalPages}>${totalPages}</a>`;
+        buttonMarkup += `<a class="pagination-btn" page="${totalPages}" path="${path}">${totalPages}</a>`;
       } else {
-        buttonMarkup += `<a class="pagination-btn">...</a><a class="pagination-btn" page=${totalPages} path="tieu-thuyet">${totalPages}</a>`;
+        buttonMarkup += `<a class="pagination-btn">...</a><a class="pagination-btn" page="${totalPages}" path="${path}">${totalPages}</a>`;
       }
     }
 
@@ -74,10 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
     btnPaginations.forEach((btn) => {
       btn.addEventListener("click", (event) => {
         event.preventDefault();
-        const pathVar = event.target.getAttribute("path");
         const page = event.target.getAttribute("page");
-
-        const url = `http://localhost:8080/booksale/api/book/category/${pathVar}?page=${
+        const url = `http://localhost:8080/booksale/api/book/category/${path}?page=${
           page - 1
         }`;
 
@@ -91,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Generate pagination buttons initially
   generatePaginationButtons();
 
-  // Function to remove book cards from the container
   const removeBookCards = (container) => {
     const bookCards = container.querySelectorAll(".book-card");
     bookCards.forEach((card) => {
@@ -99,12 +95,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // Function to load data for category books
   function loadDataCategoryBooks(url, container) {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        // Update the booksContainer with the retrieved data
         const insertHtml = data.books.map((book) => renderCard(book)).join("");
         removeBookCards(container);
         container.insertAdjacentHTML("beforeend", insertHtml);
@@ -116,12 +110,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  // handle prev button click
-  prevButton.addEventListener("click", () => {
+  prevButton.addEventListener("click", (event) => {
     if (currentPage > 1) {
       currentPage--;
       loadDataCategoryBooks(
-        `http://localhost:8080/booksale/api/book/category/tieu-thuyet?page=${
+        `http://localhost:8080/booksale/api/book/category/${path}?page=${
           currentPage - 1
         }`,
         container
@@ -129,12 +122,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // handle next button click
-  nextButton.addEventListener("click", () => {
+  nextButton.addEventListener("click", (event) => {
     if (currentPage < totalPages) {
       currentPage++;
       loadDataCategoryBooks(
-        `http://localhost:8080/booksale/api/book/category/tieu-thuyet?page=${
+        `http://localhost:8080/booksale/api/book/category/${path}?page=${
           currentPage - 1
         }`,
         container

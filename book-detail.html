@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/detail.css" />
+    <link rel="stylesheet" href="css/query.css" />
     <title>Book Detail</title>
   </head>
   <body>
@@ -20,11 +21,16 @@
     <header>
       <section class="header margin-bottom-sm">
         <div class="search-bar grid header-grid">
+          <button class="btn-mobile-nav">
+            <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+            <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+          </button>
           <div class="header-left">
-            <a href="#" class="logo"
+            <a href="index.html" class="logo"
               ><span class="header-logo">BOOKSALE</span></a
             >
           </div>
+
           <form action="#" class="search-form">
             <label for="search-input" class="search-icon"
               ><ion-icon name="search"></ion-icon
@@ -36,41 +42,74 @@
               placeholder="Tìm kiếm sách..."
             />
             <button class="btn btn--full btn--search">search</button>
+            <button class="btn-close-search">
+              <ion-icon name="close-outline" class="icon-close-form"></ion-icon>
+            </button>
           </form>
+
           <nav class="main-nav">
+            <button class="btn-search-mobile">
+              <ion-icon name="search" class="search-icon"></ion-icon>
+            </button>
             <ul class="main-nav-list">
               <li class="main-nav-item">
-                <a href="#" class="cart header-link"
+                <a href="cart.html" class="cart header-link"
                   ><ion-icon class="cart-icon" name="cart-sharp"></ion-icon
                 ></a>
               </li>
               <li class="main-nav-item">
-                <a class="user header-link" href="#"
+                <a href="authentication.html" class="header-link">Đăng nhập</a>
+              </li>
+              <li class="main-nav-item dropdown hide">
+                <a class="user header-link dropdown-toggle" href="#"
                   ><img
                     class="profile-img"
                     src="imgs/user.png"
                     alt="User's profile photo"
                 /></a>
+                <ul class="user-list dropdown-menu">
+                  <li>
+                    <a class="user-list__link" href="#">Thông tin cá nhân</a>
+                  </li>
+                  <li><a class="user-list__link" href="#">Đổi mật khẩu</a></li>
+                  <li><a class="user-list__link" href="#">Đăng xuất</a></li>
+                </ul>
               </li>
             </ul>
           </nav>
         </div>
 
-        <div class="nav-container">
-          <nav class="navigation container">
+        <nav class="navigation">
+          <div class="container">
             <ul class="nav-list">
-              <li class="">
-                <a href="" class="nav-link">Danh mục</a>
+              <li class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Danh mục</a>
+                <ul class="category-dropdown dropdown-menu">
+                  <li>
+                    <a class="category-link" href="book.html"
+                      >Tiểu thuyết - văn học</a
+                    >
+                  </li>
+                  <li><a class="category-link" href="#">Sách kinh tế</a></li>
+                  <li><a class="category-link" href="#">Sách khoa học</a></li>
+                  <li><a class="category-link" href="#">Sách self-help</a></li>
+                  <li>
+                    <a class="category-link" href="#">Sách tâm lí tội phạm</a>
+                  </li>
+                  <li><a class="category-link" href="#">Sách thiếu nhi</a></li>
+                  <li><a class="category-link" href="#">Sách bán chạy</a></li>
+                  <li><a class="category-link" href="#">Sách mới</a></li>
+                </ul>
               </li>
-              <li><a href="" class="nav-link">Sách mới</a></li>
-              <li><a href="" class="nav-link">Sách bán chạy</a></li>
-              <li><a href="" class="nav-link">Sản phẩm nổi bật</a></li>
-              <li><a href="" class="nav-link">Sách giảm giá</a></li>
+              <li><a href="#" class="nav-link">Sách mới</a></li>
+              <li><a href="#" class="nav-link">Sách bán chạy</a></li>
+              <li><a href="#" class="nav-link">Sản phẩm nổi bật</a></li>
+              <li><a href="#" class="nav-link">Sách giảm giá</a></li>
             </ul>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </section>
-    </header>
+     </header>
 
     <!-- MAIN CONTENT -->
     <main class="detail-section">

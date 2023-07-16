@@ -35,6 +35,12 @@ header {
   width: 3.2rem;
   height: 3.2rem;
 }
+/* Logo header */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
 
 .header-logo {
   font-size: 3.2rem;
@@ -42,12 +48,7 @@ header {
   color: #fab005;
 }
 
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 4.8rem;
-}
-
+/* user nav */
 .main-nav {
   display: flex;
   align-items: center;
@@ -122,12 +123,6 @@ header {
   cursor: pointer;
 }
 
-.search-icon {
-  height: 3.2rem;
-  width: 3.2rem;
-  color: #fff;
-}
-
 .logo,
 .header-link:link,
 .header-link:visited {
@@ -154,6 +149,12 @@ header {
   gap: 0.8rem;
 }
 
+/* // search form */
+
+.search-form {
+  position: relative;
+}
+
 .search-form input {
   display: inline-block;
   width: 70%;
@@ -164,13 +165,16 @@ header {
   transition: all 0.4s;
 }
 
-.search-form {
-  position: relative;
+.search-form input::placeholder {
+  font-size: 1.6rem;
+  color: #838383;
 }
 
-/* .search-icon {
-  position: relative;
-} */
+.search-icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  color: #fff;
+}
 
 .search-icon ion-icon {
   color: #838383;
@@ -179,11 +183,6 @@ header {
   top: 50%;
   left: 10px;
   transform: translateY(-60%);
-}
-
-.search-form input::placeholder {
-  font-size: 1.6rem;
-  color: #838383;
 }
 
 .btn--search {
