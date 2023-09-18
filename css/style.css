@@ -55,6 +55,14 @@ header {
   justify-content: end;
   gap: 4.8rem;
 }
+.main-nav-list {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+
+  gap: 4.8rem;
+}
 
 .main-nav-item {
   position: relative;
@@ -85,15 +93,6 @@ header {
 .user-list__link:hover,
 .user-list__link:active {
   color: #00817e;
-}
-
-.main-nav-list {
-  list-style: none;
-
-  display: flex;
-  align-items: center;
-
-  gap: 4.8rem;
 }
 
 .btn-mobile-nav,

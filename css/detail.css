@@ -1,30 +1,35 @@
 /* ******************************************** */
 /* BOOK DETAIL */
 /* ******************************************** */
+
+/* BOOK IMAGE */
 .detail-section {
   background-color: #e6f2f2;
   padding: 1.2rem 0;
 }
+
 .product-detail {
-  background-color: #fff;
   border-radius: 10px;
 }
 
 .detail-grid {
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1.5fr 3fr 1.5fr;
+  column-gap: 1.2rem;
 }
 
 .detail-img-box {
+  background-color: #fff;
   padding: 2.4rem 0;
   display: flex;
   flex-direction: column;
-
   width: 100%;
-  border-right: 2px solid #e6f2f2;
+  border-radius: 9px;
+  align-self: self-start;
 }
 
 .main-img {
   width: 70%;
+  max-width: 48rem;
   height: auto;
   margin: 0 auto;
   padding-bottom: 2.4rem;
@@ -35,18 +40,25 @@
   gap: 2.4rem;
   justify-content: center;
   align-items: center;
+  padding: 1.2rem;
 }
 
 .detail-img {
-  width: 6.4rem;
-  height: 6.4rem;
+  width: 4.8rem;
+  height: 4.8rem;
   background-color: #7d7d7d;
   border-radius: 10px;
 }
 
+/* MIDDLE PART. BOOK INFORMATION */
 .detail-text-box {
   display: flex;
   flex-direction: column;
+}
+
+.main-info {
+  background-color: #fff;
+  border-radius: 9px;
   padding: 2.4rem;
 }
 
@@ -78,7 +90,8 @@
   justify-content: space-between;
   align-items: center;
   background-image: linear-gradient(to right, #f03e3e, #fd7e14);
-  width: 50%;
+  width: 60%;
+  max-width: 50rem;
   padding: 1.2rem 2.4rem;
   border-radius: 10px;
 }
@@ -115,6 +128,160 @@
   font-weight: 500;
 }
 
+.relevant-books {
+  margin-top: 1.2rem;
+  background-color: #fff;
+  padding: 3.2rem;
+  border-radius: 9px;
+  position: relative;
+}
+
+.relevant-books-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 2.4rem;
+}
+
+.relevant-book {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.relevant-book-link,
+.relevant-book-link:link,
+.relevant-book-link:visited {
+  display: inline-block;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #767676;
+}
+
+.relevant-book-link:active .relevant-book-title,
+.relevant-book-link:hover .relevant-book-title {
+  color: #00817e;
+}
+
+.relevant-book-link .relevant-book-img {
+  width: 12rem;
+  height: 16rem;
+  background-color: #7d7d7d;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  transition: all 0.3s;
+}
+
+.relevant-book-link:hover .relevant-book-img {
+  transform: scale(1.05);
+}
+
+.relevant-book-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.relevant-book-price {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #00817e;
+}
+
+.relevant-book-price span {
+  font-size: 1.4rem;
+}
+
+.dots {
+  position: absolute;
+  bottom: 0.5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #e6f2f2;
+  margin: 0 0.3rem;
+}
+
+.dot.active {
+  background-color: #00817e;
+}
+
+.detail-infomation {
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 2.4rem;
+  margin-top: 1.2rem;
+}
+
+.detail-info-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.4rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: solid 2px #e6f2f2;
+}
+
+.detail-label {
+  width: 50%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #767676;
+}
+
+.detail-content {
+  width: 50%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.book-description {
+  margin-top: 1.2rem;
+
+  padding: 2.4rem;
+  border-radius: 9px;
+  background-color: #fff;
+}
+
+.description {
+  text-align: justify;
+  margin-top: 1.2rem;
+  margin-bottom: 2.4rem;
+  font-size: 1.4rem;
+  color: #5e5e5e;
+  line-height: 1.8;
+}
+
+.more {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  color: #00817e;
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.more:hover {
+  color: #005c59;
+}
+
+/* PRICE SECTION. RIGHT PART*/
 .shipped-address {
   font-size: 1.2rem;
   color: #444;
@@ -144,20 +311,92 @@
 }
 
 .buy-form {
-  padding: 2.4rem 0;
-  border-top: 2px solid #e6f2f2;
+  padding: 2.4rem;
+  background-color: #fff;
+  border-radius: 9px;
+  align-self: self-start;
+}
+
+.quantity-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.4rem;
+}
+
+.quantity-box input {
+  height: 3.6rem;
+  max-width: 5rem;
+  text-align: center;
+  border-top: 1px solid #00817e;
+  border-bottom: 1px solid #00817e;
+  border-right: none;
+  border-left: none;
+}
+
+.quantity input[type="number"] {
+  /* Styles for the number input */
+  /* For example, you can change the text color and font size */
+  color: #333;
+  font-size: 1.6rem;
+}
+
+.quantity-box input[type="number"]::-webkit-inner-spin-button,
+.quantity-box input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .quantity-label {
   font-size: 1.6rem;
-  color: #444;
+  font-weight: 700;
+  color: #333;
 }
 
 .btn-buy {
   color: #fff;
   background-color: #00817e;
   border-radius: 10px;
-  width: 30%;
+  width: 100%;
   font-weight: 500;
   text-transform: capitalize;
+  margin-bottom: 1.2rem;
+}
+
+.btn-buy:hover {
+  background-color: #1a8e8b;
+}
+
+.btn-add-to-cart {
+  color: #00817e;
+  border: 1px solid #00817e;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 100%;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.btn-add-to-cart:hover {
+  background-color: #e6f2f2;
+}
+
+.btn-decrease,
+.btn-increase {
+  width: 3.6rem;
+  height: 3.6rem;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  background-color: #00817e;
+}
+
+.btn-decrease {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.btn-increase {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
