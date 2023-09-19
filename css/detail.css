@@ -256,6 +256,7 @@
   padding: 2.4rem;
   border-radius: 9px;
   background-color: #fff;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.06), #fff 100%);
 }
 
 .description {
@@ -265,6 +266,23 @@
   font-size: 1.4rem;
   color: #5e5e5e;
   line-height: 1.8;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+
+  transition: all 0.3s;
+}
+
+.show-more .description {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+}
+
+.book-description.show-more {
+  background-image: none;
 }
 
 .more {
@@ -331,6 +349,8 @@
   border-bottom: 1px solid #00817e;
   border-right: none;
   border-left: none;
+
+  transition: all 0.3s;
 }
 
 .quantity input[type="number"] {
@@ -387,8 +407,10 @@
   border: none;
   color: #fff;
   font-size: 1.8rem;
+  cursor: pointer;
   font-weight: 500;
   background-color: #00817e;
+  transition: all 0.1s;
 }
 
 .btn-decrease {
@@ -399,4 +421,9 @@
 .btn-increase {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.btn-decrease:hover,
+.btn-increase:hover {
+  background-color: #1a8e8b;
 }
