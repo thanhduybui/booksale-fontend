@@ -1,0 +1,25 @@
+.error-page {
+  background-color: #fff;
+  height: 100vh;
+}
+
+.error-card {
+  margin: 6.4rem auto;
+  width: 40%;
+  background-color: #f7f7f7;
+  padding: 3.6rem;
+  border-radius: 6px;
+}
+
+.error-title {
+  color: #f03e3e;
+  font-size: 3.6rem;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+
+.error-content {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #444;
+}

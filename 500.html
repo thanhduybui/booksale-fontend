@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/error.css" />
+
+    <title>Server error</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <section class="header">
+        <div class="search-bar grid header-grid">
+          <button class="btn-mobile-nav">
+            <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+            <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+          </button>
+          <div class="header-left">
+            <a href="index.html" class="logo"
+              ><span class="header-logo">BOOKSALE</span></a
+            >
+          </div>
+
+          <form action="#" class="search-form">
+            <label for="search-input" class="search-icon"
+              ><ion-icon name="search"></ion-icon
+            ></label>
+            <input
+              type="text"
+              id="search-input"
+              class="margin-right-sm"
+              placeholder="Tìm kiếm sách..."
+            />
+            <button class="btn btn--full btn--search">search</button>
+          </form>
+
+          <nav class="main-nav">
+            <button class="btn-search-mobile">
+              <ion-icon name="search" class="search-icon"></ion-icon>
+            </button>
+            <ul class="main-nav-list">
+              <li class="main-nav-item">
+                <a href="#" class="cart header-link"
+                  ><ion-icon class="cart-icon" name="cart-sharp"></ion-icon
+                ></a>
+              </li>
+              <li class="main-nav-item">
+                <a href="authentication.html" class="header-link">Đăng nhập</a>
+              </li>
+              <li class="main-nav-item dropdown hide">
+                <a class="user header-link dropdown-toggle" href="#"
+                  ><img
+                    class="profile-img"
+                    src="imgs/user.png"
+                    alt="User's profile photo"
+                /></a>
+                <ul class="user-list dropdown-menu">
+                  <li>
+                    <a class="user-list__link" href="#">Thông tin cá nhân</a>
+                  </li>
+                  <li><a class="user-list__link" href="#">Đổi mật khẩu</a></li>
+                  <li><a class="user-list__link" href="#">Đăng xuất</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <nav class="navigation">
+          <div class="container">
+            <ul class="nav-list">
+              <li class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Danh mục</a>
+                <ul class="category-dropdown dropdown-menu">
+                  <li>
+                    <a class="category-link" href="#">Tiểu thuyết - văn học</a>
+                  </li>
+                  <li><a class="category-link" href="#">Sách kinh tế</a></li>
+                  <li><a class="category-link" href="#">Sách khoa học</a></li>
+                  <li><a class="category-link" href="#">Sách self-help</a></li>
+                  <li>
+                    <a class="category-link" href="#">Sách tâm lí tội phạm</a>
+                  </li>
+                  <li><a class="category-link" href="#">Sách thiếu nhi</a></li>
+                  <li><a class="category-link" href="#">Sách bán chạy</a></li>
+                  <li><a class="category-link" href="#">Sách mới</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="nav-link">Sách mới</a></li>
+              <li><a href="#" class="nav-link">Sách bán chạy</a></li>
+              <li><a href="#" class="nav-link">Sản phẩm nổi bật</a></li>
+              <li><a href="#" class="nav-link">Sách giảm giá</a></li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+    </header>
+
+    <main class="error-page container">
+      <div class="error-card">
+        <p class="error-title"><span>500:</span></p>
+        <p class="error-content">Không tìm thấy trang. Vui lòng thử lại sau!</p>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo"> BookSale </a>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; 2027 by BookSale, Inc. All rights reserved.
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Liên hệ</p>
+          <address class="contacts">
+            <p class="address">1 Võ Văn Ngânn - Thủ Đức - Hồ Chí Minh</p>
+            <p>
+              <a class="footer-link" href="tel:0383314133">0383314133</a><br />
+              <a class="footer-link" href="dtb742002@gmail.com"
+                >dtb742002@gmail.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Tài khoản</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Tạo tài khoản</a></li>
+            <li><a class="footer-link" href="#">Đăng ký</a></li>
+            <li><a class="footer-link" href="#">Cá nhân</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Công ty</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Về chúng tôi</a></li>
+            <li><a class="footer-link" href="#">Tác giả</a></li>
+            <li><a class="footer-link" href="#">Nhà xuất bản</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

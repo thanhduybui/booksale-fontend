@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/cart.css" />
 
     <script defer src="scripts/index.js"></script>
+    <script defer src="scripts/user.js"></script>
     <title>The BookSale</title>
   </head>
   <body>
@@ -116,89 +117,176 @@
         </h2>
 
         <div class="container grid cart-grid">
-          <div class="cart-books">
-            <div class="cart-book">
-              <form action="#" class="cart-book__form">
-                <input type="checkbox" class="checkbox margin-right-md" />
-                <div class="img-box margin-right-sm">
-                  <img
-                    class="cart-img"
-                    src="imgs/top-books/book1.jpeg"
-                    alt="Cay cam ngot cua toi"
-                  />
-                </div>
-                <p class="cart-book-title margin-right-super">
-                  Cây cam ngọt của tôi
-                </p>
+          <div class="cart-main">
+            <div class="book-container">
+              <h1 class="cart-head">Sách đã thêm</h1>
+              <div class="cart-book">
+                <form action="#" class="cart-book__form">
+                  <input type="checkbox" class="checkbox margin-right-md" />
+                  <div class="img-box margin-right-sm">
+                    <img
+                      class="cart-img"
+                      src="imgs/top-books/book1.jpeg"
+                      alt="Cay cam ngot cua toi"
+                    />
+                  </div>
+                  <p class="cart-book-title margin-right-super">
+                    Cây cam ngọt của tôi
+                  </p>
+                  <div class="price-tag margin-right-super">
+                    <p class="price-tag__sale">67.000<span>đ</span></p>
+                    <p class="price-tag__origin">100.000<span>đ</span></p>
+                  </div>
+                  <div
+                    class="quantity-box__cart quantity-box margin-right-super"
+                  >
+                    <button class="btn-decrease">-</button>
+                    <input type="number" min="0" value="0" />
+                    <button class="btn-increase">+</button>
+                  </div>
+                  <button type="submit" class="btn-detele-item">
+                    <ion-icon
+                      class="delete-icon"
+                      name="trash-outline"
+                    ></ion-icon>
+                  </button>
+                </form>
+              </div>
+              <div class="cart-book">
+                <form action="#" class="cart-book__form">
+                  <input type="checkbox" class="checkbox margin-right-md" />
+                  <div class="img-box margin-right-sm">
+                    <img
+                      class="cart-img"
+                      src="imgs/top-books/book1.jpeg"
+                      alt="Cay cam ngot cua toi"
+                    />
+                  </div>
+                  <p class="cart-book-title margin-right-super">
+                    Cây cam ngọt của tôi
+                  </p>
 
-                <div class="price-tag margin-right-super">
-                  <p class="price-tag__sale">67.000<span>đ</span></p>
-                  <p class="price-tag__origin">100.000<span>đ</span></p>
-                </div>
-                <div class="quantity-box__cart quantity-box margin-right-super">
-                  <button class="btn-decrease">-</button>
-                  <input type="number" min="0" value="0" />
-                  <button class="btn-increase">+</button>
-                </div>
-                <button type="submit" class="btn-detele-item">
-                  <ion-icon class="delete-icon" name="trash-outline"></ion-icon>
-                </button>
-              </form>
+                  <div class="price-tag margin-right-super">
+                    <p class="price-tag__sale">67.000<span>đ</span></p>
+                    <p class="price-tag__origin">100.000<span>đ</span></p>
+                  </div>
+                  <div
+                    class="quantity-box__cart quantity-box margin-right-super"
+                  >
+                    <button class="btn-decrease">-</button>
+                    <input type="number" min="0" value="0" />
+                    <button class="btn-increase">+</button>
+                  </div>
+                  <button type="submit" class="btn-detele-item">
+                    <ion-icon
+                      class="delete-icon"
+                      name="trash-outline"
+                    ></ion-icon>
+                  </button>
+                </form>
+              </div>
+              <div class="cart-book">
+                <form action="#" class="cart-book__form">
+                  <input type="checkbox" class="checkbox margin-right-md" />
+                  <div class="img-box margin-right-sm">
+                    <img
+                      class="cart-img"
+                      src="imgs/top-books/book1.jpeg"
+                      alt="Cay cam ngot cua toi"
+                    />
+                  </div>
+                  <p class="cart-book-title margin-right-super">
+                    Cây cam ngọt của tôi
+                  </p>
+
+                  <div class="price-tag margin-right-super">
+                    <p class="price-tag__sale">67.000<span>đ</span></p>
+                    <p class="price-tag__origin">100.000<span>đ</span></p>
+                  </div>
+                  <div
+                    class="quantity-box__cart quantity-box margin-right-super"
+                  >
+                    <button class="btn-decrease">-</button>
+                    <input type="number" min="0" value="0" />
+                    <button class="btn-increase">+</button>
+                  </div>
+                  <button type="submit" class="btn-detele-item">
+                    <ion-icon
+                      class="delete-icon"
+                      name="trash-outline"
+                    ></ion-icon>
+                  </button>
+                </form>
+              </div>
             </div>
-            <div class="cart-book">
-              <form action="#" class="cart-book__form">
-                <input type="checkbox" class="checkbox margin-right-md" />
-                <div class="img-box margin-right-sm">
-                  <img
-                    class="cart-img"
-                    src="imgs/top-books/book1.jpeg"
-                    alt="Cay cam ngot cua toi"
-                  />
-                </div>
-                <p class="cart-book-title margin-right-super">
-                  Cây cam ngọt của tôi
-                </p>
 
-                <div class="price-tag margin-right-super">
-                  <p class="price-tag__sale">67.000<span>đ</span></p>
-                  <p class="price-tag__origin">100.000<span>đ</span></p>
-                </div>
-                <div class="quantity-box__cart quantity-box margin-right-super">
-                  <button class="btn-decrease">-</button>
-                  <input type="number" min="0" value="0" />
-                  <button class="btn-increase">+</button>
-                </div>
-                <button type="submit" class="btn-detele-item">
-                  <ion-icon class="delete-icon" name="trash-outline"></ion-icon>
-                </button>
-              </form>
-            </div>
-            <div class="cart-book">
-              <form action="#" class="cart-book__form">
-                <input type="checkbox" class="checkbox margin-right-md" />
-                <div class="img-box margin-right-sm">
-                  <img
-                    class="cart-img"
-                    src="imgs/top-books/book1.jpeg"
-                    alt="Cay cam ngot cua toi"
-                  />
-                </div>
-                <p class="cart-book-title margin-right-super">
-                  Cây cam ngọt của tôi
-                </p>
+            <div class="address-section">
+              <h1 class="cart-head">Thông tin nhận hàng</h1>
+              <form
+                action="#"
+                method="POST"
+                class="address-form address-form_cart"
+              >
+                <div class="address-group">
+                  <div class="form-control">
+                    <label for="fullName">Họ và tên</label>
+                    <input
+                      type="text"
+                      class="user-name"
+                      id="fullName"
+                      name="fullName"
+                      required
+                    />
+                  </div>
 
-                <div class="price-tag margin-right-super">
-                  <p class="price-tag__sale">67.000<span>đ</span></p>
-                  <p class="price-tag__origin">100.000<span>đ</span></p>
+                  <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+
+                  <div class="form-control">
+                    <label for="phone">Số điện thoại</label>
+                    <input type="tel" id="phone" name="phone" required />
+                  </div>
+                  <div class="form-control">
+                    <label for="province">Tỉnh / Thành phố</label>
+                    <select id="province" name="province" required>
+                      <option value="">Chọn tỉnh (thành phố)</option>
+                      <option value="province1">Province 1</option>
+                      <option value="province2">Province 2</option>
+                    </select>
+                  </div>
+
+                  <div class="form-control">
+                    <label for="district">Quận / Huyện</label>
+                    <select id="district" name="district" required>
+                      <option value="">Chọn quận (huyện)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-control">
+                    <label for="city">Phường / Xã</label>
+                    <select id="ward" name="ward" required>
+                      <option value="">Chọn phường (xã)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-control">
+                    <label for="street">Đường</label>
+                    <input type="text" id="street" name="street" required />
+                  </div>
+
+                  <div class="form-control">
+                    <label for="description">Thêm mô tả</label>
+                    <textarea
+                      type="textarea"
+                      id="description"
+                      name="description"
+                      rows="4"
+                      cols="30"
+                    ></textarea>
+                  </div>
                 </div>
-                <div class="quantity-box__cart quantity-box margin-right-super">
-                  <button class="btn-decrease">-</button>
-                  <input type="number" min="0" value="0" />
-                  <button class="btn-increase">+</button>
-                </div>
-                <button type="submit" class="btn-detele-item">
-                  <ion-icon class="delete-icon" name="trash-outline"></ion-icon>
-                </button>
               </form>
             </div>
           </div>

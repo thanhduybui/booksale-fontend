@@ -15,13 +15,20 @@
   box-shadow: none;
 }
 
-.cart-books {
+.cart-main {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
   padding: 2.4rem;
   border-radius: 10px;
+}
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  margin-bottom: 4.6rem;
 }
 
 .cart-book {
@@ -63,7 +70,9 @@
   color: #767676;
   text-decoration: line-through;
 }
-
+.quantity-box__cart {
+  margin-bottom: 0;
+}
 .quantity-box__cart input {
   width: 5rem;
 }
@@ -208,6 +217,17 @@
 
 .payment-method-option-text {
   font-size: 1.4rem;
+}
+
+.cart-head {
+  font-size: 2rem;
+  letter-spacing: 1.2;
+  margin-bottom: 3.6rem;
+}
+
+.address-form_cart {
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 /* ******************************************** */
