@@ -231,6 +231,7 @@
   .top-book {
     text-align: center;
   }
+
   .tb-img-box {
     margin: 0 auto 2.4rem;
     max-width: 70%;
@@ -240,5 +241,10 @@
   .grid--footer {
     grid-template-columns: 1fr 1fr;
     gap: 6.4rem;
+  }
+
+  .card-img {
+    width: 8rem;
+    height: 12rem;
   }
 }

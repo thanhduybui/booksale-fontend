@@ -35,12 +35,6 @@ header {
   width: 3.2rem;
   height: 3.2rem;
 }
-/* Logo header */
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 4.8rem;
-}
 
 .header-logo {
   font-size: 3.2rem;
@@ -48,19 +42,16 @@ header {
   color: #fab005;
 }
 
-/* user nav */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
 .main-nav {
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 4.8rem;
-}
-.main-nav-list {
-  list-style: none;
-
-  display: flex;
-  align-items: center;
-
   gap: 4.8rem;
 }
 
@@ -95,6 +86,15 @@ header {
   color: #00817e;
 }
 
+.main-nav-list {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+
+  gap: 4.8rem;
+}
+
 .btn-mobile-nav,
 .btn-close-search {
   border: none;
@@ -122,6 +122,12 @@ header {
   cursor: pointer;
 }
 
+.search-icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  color: #fff;
+}
+
 .logo,
 .header-link:link,
 .header-link:visited {
@@ -142,16 +148,22 @@ header {
   font-size: 3.2rem;
 }
 
+.cart-quantity {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  background-color: #fab005;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem;
+  border-radius: 50%;
+}
+
 .header-link.category {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-}
-
-/* // search form */
-
-.search-form {
-  position: relative;
 }
 
 .search-form input {
@@ -164,16 +176,13 @@ header {
   transition: all 0.4s;
 }
 
-.search-form input::placeholder {
-  font-size: 1.6rem;
-  color: #838383;
+.search-form {
+  position: relative;
 }
 
-.search-icon {
-  height: 3.2rem;
-  width: 3.2rem;
-  color: #fff;
-}
+/* .search-icon {
+  position: relative;
+} */
 
 .search-icon ion-icon {
   color: #838383;
@@ -182,6 +191,11 @@ header {
   top: 50%;
   left: 10px;
   transform: translateY(-60%);
+}
+
+.search-form input::placeholder {
+  font-size: 1.6rem;
+  color: #838383;
 }
 
 .btn--search {
@@ -270,11 +284,11 @@ header {
 .sticky .header {
   position: fixed;
   top: 0;
-  bottom: 0;
   width: 100%;
   z-index: 2000;
   padding-top: 0;
   padding-bottom: 0;
+  background-color: #000;
   box-shadow: 0 0rem 1.6rem rgba(0, 0, 0, 0.03);
 }
 
@@ -537,6 +551,7 @@ header {
   color: #00817e;
 }
 
+.bs-link,
 .bs-link:link,
 .bs-link:visited {
   display: inline-block;
@@ -568,9 +583,8 @@ header {
 }
 
 .card-img {
-  width: 100%;
-  max-width: 12rem;
-  height: auto;
+  width: 12rem;
+  height: 18rem;
   margin: 0 auto;
 }
 
@@ -652,6 +666,7 @@ header {
 }
 .btn-bs-all {
   background-color: #fab005;
+  text-decoration: none;
 }
 
 .btn-bs-all:hover {
