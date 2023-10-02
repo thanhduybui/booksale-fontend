@@ -52,6 +52,7 @@
 .cart-book-title {
   font-size: 1.6rem;
   min-width: 10rem;
+  max-width: 10rem;
 }
 
 .price-tag {
@@ -125,6 +126,23 @@
 .change-address__link:active {
   color: #00817e;
   border-bottom: 1px solid #00817e;
+}
+
+/* Style the link text color and remove underlines */
+.adress-link,
+.adress-link:link,
+.adress-link:visited {
+  color: #004d4c; /* Change to your preferred text color */
+  text-decoration: none; /* Remove underlines */
+  font-weight: bold; /* Add bold font weight if desired */
+  font-size: 1.6rem; /* Adjust the font size as needed */
+  transition: all 0.3;
+}
+
+/* Style the link on hover (when the mouse pointer is over it) */
+.adress-link:hover,
+.addres-link:active {
+  text-decoration: underline; /* Add underlines on hover if desired */
 }
 
 .info {
@@ -228,6 +246,43 @@
 .address-form_cart {
   max-width: 50rem;
   margin: 0 auto;
+}
+
+/* cart empty */
+h1 {
+  color: #333;
+}
+
+p {
+  color: #666;
+  font-size: 1.6rem;
+  margin: 0 auto;
+}
+
+.cart-empty-img {
+  width: 50%;
+  height: auto;
+  margin: 0 auto 2rem;
+}
+
+.btn-cart-empty {
+  display: inline-block;
+  text-align: center;
+  background-color: #fab005;
+  color: #555555;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1.2rem 2.4rem;
+  margin-top: 2rem;
+  border-radius: 9px;
+  transition: background-color 0.3s ease;
+  min-width: 20rem;
+  margin: 0 auto 6.4rem;
+}
+
+.btn-cart-empty:hover {
+  background-color: #f59f00;
 }
 
 /* ******************************************** */
