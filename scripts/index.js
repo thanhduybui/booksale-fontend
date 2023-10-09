@@ -1,3 +1,5 @@
+import { stickyHeader, sliderHandler, renderCard } from "./utils.js";
+
 // ****************************************************************
 // for dropdown menu
 const dropdownEls = document.querySelectorAll(".dropdown");
@@ -41,76 +43,6 @@ btnCloseSearch.addEventListener("click", () => {});
 
 // ****************************************************************
 // slider
-const sliderHandler = function () {
-  const slides = document.querySelectorAll(".slide");
-  const btnPrev = document.querySelector(".btn-left");
-  const btnNext = document.querySelector(".btn-right");
-  const dotContainer = document.querySelector(".dots");
-
-  let curSlide = 0;
-  const maxSlide = slides.length;
-
-  // Functions
-  const createDots = function () {
-    slides.forEach(function (_, i) {
-      dotContainer.insertAdjacentHTML(
-        "beforeend",
-        `<div class="dot" data-slide="${i}"></div>`
-      );
-    });
-  };
-
-  const activateDot = function (slide) {
-    document
-      .querySelectorAll(".dot")
-      .forEach((dot) => dot.classList.remove("dot--current"));
-
-    document
-      .querySelector(`.dot[data-slide="${slide}"]`)
-      .classList.add("dot--current");
-  };
-
-  const goToSlide = function (slide) {
-    slides.forEach(
-      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
-    );
-  };
-
-  // Next slide
-  const nextSlide = function () {
-    if (curSlide === maxSlide - 1) {
-      curSlide = 0;
-    } else {
-      curSlide++;
-    }
-
-    goToSlide(curSlide);
-    activateDot(curSlide);
-  };
-
-  const prevSlide = function () {
-    if (curSlide === 0) {
-      curSlide = maxSlide - 1;
-    } else {
-      curSlide--;
-    }
-    goToSlide(curSlide);
-    activateDot(curSlide);
-  };
-
-  const init = function () {
-    goToSlide(0);
-    createDots();
-
-    activateDot(0);
-  };
-  init();
-
-  // Event handlers
-  btnNext.addEventListener("click", nextSlide);
-  btnPrev.addEventListener("click", prevSlide);
-};
-
 sliderHandler();
 
 // LOAD DATA FROM DATA FROM APIs
@@ -152,39 +84,6 @@ function loadDataBooks(url, container) {
     });
 }
 
-function renderCard(book) {
-  return `
-  <div class="book-card">
-  <span class="discount-tag">-${book.discount}%</span>
-  <img
-    src=${book.mainImg}
-    alt="Book Cover"
-    class="card-img"
-  />
-  <div class="card-body">
-    <h3 class="card-title">${titleHanlder(book.title)}</h3>
-    <div class="rating card-rating">
-      <span class="rating-number">4.8</span
-      ><span><ion-icon name="star"></ion-icon></span
-      ><span class="rating-text">Đã bán 200</span>
-    </div>
-    <div class="card-prices">
-      <span class="card-discount">${book.finalPrice}đ</span>
-      <span class="card-price">${book.price}đ</span>
-    </div>
-    <a href="#" class="card-link">mua sách &rarr;</a>
-  </div>
-</div>`;
-}
-
-function titleHanlder(title) {
-  let result = title;
-  if (title.length > 50) {
-    result = title.substring(0, 50) + "...";
-  }
-  return result;
-}
-
 // ----------------------------------------------------------------
 // HANDLE TAB ON CATEGORY BOOK
 const categoryLinkEl = document.querySelectorAll(".bs-link");
@@ -206,26 +105,5 @@ function removeSelectedLinks(listContainer) {
 }
 
 // sticky navigation
-
 const sectionSliderEl = document.querySelector(".section-slider");
-const obs = new IntersectionObserver(
-  (entries) => {
-    const ent = entries[0];
-
-    if (!ent.isIntersecting) {
-      document.querySelector("header").classList.add("sticky");
-    }
-    if (ent.isIntersecting) {
-      document.querySelector("header").classList.remove("sticky");
-    }
-  },
-  {
-    // in the viewport
-    root: null,
-    threshold: 0,
-    rootMargin: "-180px",
-  }
-);
-obs.observe(sectionSliderEl);
-
-//
+stickyHeader(sectionSliderEl);

@@ -1,4 +1,8 @@
+import { stickyHeader, renderCard } from "./utils.js";
+
 const categoryLink = document.querySelector(".category-item");
+const sibebarCutPoint = document.querySelector(".sidebar");
+stickyHeader(sibebarCutPoint);
 
 categoryLink.addEventListener("click", () => {
   categoryLink.classList.toggle("show-sub-items");
@@ -14,8 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".books");
 
   const path = prevButton.getAttribute("path");
-
-  console.log(path);
 
   loadDataCategoryBooks(
     `http://localhost:8080/booksale/api/book/category/${path}?page=0`,
