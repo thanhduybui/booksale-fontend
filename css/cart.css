@@ -253,7 +253,7 @@ h1 {
   color: #333;
 }
 
-p {
+.cart-description {
   color: #666;
   font-size: 1.6rem;
   margin: 0 auto;
