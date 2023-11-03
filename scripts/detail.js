@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // for toggle between show more and show less
   const showMore = document.querySelector(".more");
   const bookDescriptionBox = document.querySelector(".book-description");
+  // Get the modal and buttons
+  const modal = document.querySelector(".modal");
+  const closeModal = document.querySelector(".close");
+  const modalCloseButton = document.querySelector("#modalCloseButton");
 
   // decrease quantity of selected book
   btnDecrease.addEventListener("click", (event) => {
@@ -35,6 +39,28 @@ document.addEventListener("DOMContentLoaded", () => {
       showMore.textContent = "Thu gọn";
     } else {
       showMore.textContent = "Xem thêm";
+    }
+  });
+
+  btnAddToCart.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.style.display = "block";
+  });
+
+  // Close the modal when the close button (×) is clicked
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Close the modal when the OK button is clicked
+  modalCloseButton.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Close the modal if the user clicks outside of it
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
     }
   });
 });

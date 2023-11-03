@@ -1,29 +1,56 @@
 document.addEventListener("DOMContentLoaded", () => {
   const btnDecreases = document.querySelectorAll(".btn-decrease");
   const btnIncreases = document.querySelectorAll(".btn-increase");
+  const checkboxes = document.querySelectorAll(".checkbox");
+  const totalPriceElement = document.querySelector(".total .money");
+  const originPriceElement = document.querySelector(".subtotal .money");
+  const dicountPriceElement = document.querySelector(".discount .money");
+  const shippingFeeElement = document.querySelector(".shipping .money");
 
-  updateData = (id, quantity) => {
-    const data = {
-      id: id,
-      quantity: quantity,
-    };
-    fetch("http://localhost:3000/cart/update-quantity", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      console.log(res);
+  // Initialize total price
+  let totalPrice = 0;
+  let totalOriginPrice = 0;
+  let discountPrice = 0;
+  let shippingFee = parseFloat(shippingFeeElement.textContent);
+
+  // Function to update the total price based on the checkbox state
+  const updateTotalPrice = () => {
+    totalPrice = 0;
+    totalOriginPrice = 0;
+    discountPrice = 0;
+    checkboxes.forEach((checkbox, index) => {
+      if (checkbox.checked) {
+        const quantityInput = checkbox
+          .closest(".cart-book__form")
+          .querySelector(".quantity-box input");
+        const originPriceTag = checkbox
+          .closest(".cart-book__form")
+          .querySelector(".price-tag__origin");
+        const salePriceElement = checkbox
+          .closest(".cart-book__form")
+          .querySelector(".price-tag__sale");
+        const quantity = parseInt(quantityInput.value);
+        const salePrice = parseFloat(salePriceElement.textContent);
+        const originPriceValue = parseFloat(originPriceTag.textContent);
+        const itemTotal = quantity * salePrice;
+        const itemTotalOriginPrice = quantity * originPriceValue;
+        totalPrice += itemTotal;
+        totalOriginPrice += itemTotalOriginPrice;
+      }
     });
+    totalPriceElement.textContent = (totalPrice + shippingFee).toFixed(3);
+    originPriceElement.textContent = totalOriginPrice.toFixed(3);
+    dicountPriceElement.textContent = (totalPrice - totalOriginPrice).toFixed(
+      3
+    );
   };
 
-  // Function to get the book ID
-  function getBookId(element) {
-    const hiddenInput = element.parentElement.querySelector(".book-id");
-    return hiddenInput.value;
-  }
+  // Add change event listeners to checkboxes
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", updateTotalPrice);
+  });
 
+  // Add click event listeners to decrease and increase buttons
   btnDecreases.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -32,10 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (currentValue > 1) {
         input.value = currentValue - 1;
       }
-
-      const id = getBookId(e.target.parentElement);
-      const quantity = input.value;
-      updateData(id, quantity);
+      updateTotalPrice();
     });
   });
 
@@ -45,10 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const input = e.target.parentElement.querySelector(".quantity-box input");
       const currentValue = parseInt(input.value);
       input.value = currentValue + 1;
-
-      const id = getBookId(e.target.parentElement);
-      const quantity = input.value;
-      updateData(id, quantity);
+      updateTotalPrice();
     });
   });
+
+  // Initial update of total price
+  updateTotalPrice();
 });
